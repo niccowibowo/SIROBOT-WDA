@@ -1,12 +1,44 @@
 /* ---------- Visi & Misi (dipakai index + tentang-kami) ---------- */
-.visimisi { background: var(--bg-soft); display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-.visimisi h2 { grid-column: 1 / -1; text-align: center; font-size: 36px; font-weight: 800; }
-.visimisi article {
-    background: #fff; border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow);
+
+.visimisi {
+    background: var(--bg-soft);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
 }
-.visimisi h3 { font-size: 24px; color: var(--navy); margin-bottom: 16px; }
-.visimisi ol { list-style: decimal; padding-left: 22px; color: var(--muted); font-size: 17px; line-height: 28px; }
+
+.visimisi h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.visimisi article {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+.visimisi h3 {
+    font-size: 24px;
+    color: var(--navy);
+    margin-bottom: 16px;
+}
+
+.visimisi ol {
+    list-style: decimal;
+    padding-left: 22px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 28px;
+}
+
+/* ---------- Responsive ---------- */
 
 @media (max-width: 900px) {
-    .visimisi { grid-template-columns: 1fr; }
+    .visimisi {
+        grid-template-columns: 1fr;
+    }
 }
