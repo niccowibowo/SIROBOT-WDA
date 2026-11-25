@@ -59,14 +59,30 @@ main > section { max-width: none; box-sizing: border-box; }
   display: grid; grid-template-columns: minmax(0, 600px) minmax(0, 1fr);
   align-items: center; gap: 32px; min-height: 640px;
 }
-.hero-text { width: auto; padding: 0 0 40px; }
-.eyebrow { font-size: 20px; font-weight: 700; letter-spacing: 1px; line-height: 1; color: #e53935; margin: 0 0 8px; text-transform: uppercase; }
-.hero h1 { font-size: 54px; font-weight: 700; line-height: 1.1; color: #21272a; margin: 0 0 40px; }
-.hero h1 span { display: block; margin-top: 8px; font-size: 42px; font-weight: 800; line-height: 1.1; }
-.hero .lead { max-width: 600px; font-size: 18px; line-height: 1.4; color: #21272a; margin: 0 0 32px; }
-.hero-aksi { display: flex; gap: 12px; flex-wrap: wrap; margin: 0; }
-.hero-aksi a { min-width: 168px; }
-.hero-aksi .btn-putih { display: none; }  /* desain desktop hanya punya tombol Join Us */
+.hero-text { 
+  width: auto; padding: 0 0 40px; 
+}
+.eyebrow { 
+  font-size: 20px; font-weight: 700; letter-spacing: 1px; line-height: 1; color: #e53935; margin: 0 0 8px; text-transform: uppercase; 
+}
+.hero h1 { 
+  font-size: 54px; font-weight: 700; line-height: 1.1; color: #21272a; margin: 0 0 40px; 
+}
+.hero h1 span { 
+  display: block; margin-top: 8px; font-size: 42px; font-weight: 800; line-height: 1.1; }
+.hero .lead { 
+  max-width: 600px; font-size: 18px; line-height: 1.4; color: #21272a; margin: 0 0 32px; 
+}
+.hero-aksi { 
+  display: flex; gap: 12px; flex-wrap: wrap; margin: 0; 
+}
+.hero-aksi a { 
+  min-width: 168px; 
+}
+.hero-aksi .btn-putih { 
+  display: none;
+ }  /* desain desktop hanya punya tombol Join Us */
+ 
 .hero-art {
   align-self: end; justify-self: end; width: calc(100% + 50px); max-width: 575px; aspect-ratio: 575 / 673; max-height: none;
   margin: 0 -50px -30px 0;

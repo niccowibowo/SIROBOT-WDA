@@ -1,8 +1,7 @@
-/*dashboard.css : halaman DASHBOARD pengurus
+/*dashboard.css buat halaman DASHBOARD pengurus
    Dimuat setelah admin-base.css, admin-header.css, admin-sidebar.css, 
    notifikasi.css
    */
-
 /* ---------- Banner salam ---------- */
 .banner {
     position: relative; overflow: hidden; min-height: 180px; margin-bottom: 28px; padding: 28px 32px;

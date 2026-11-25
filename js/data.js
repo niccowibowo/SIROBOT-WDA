@@ -170,8 +170,101 @@ var BERITA = [
       "[CONTOH - ganti] Peran tim UKM Robotika IR64 POLIJE dan hasil yang dicapai pada kegiatan ini.",
       "[CONTOH - ganti] Penutup dan rencana kegiatan berikutnya."
     ]
+  },
+  {
+    "id": "persiapan-krai-2026",
+    "tipe": "kegiatan",
+    "kategori": "Kegiatan",
+    "judul": "Persiapan KRAI 2026 di UNEJ",
+    "penyelenggara": "UNEJ",
+    "peringkat": "",
+    "tahun": "2026",
+    "tanggal": "1 Oktober 2026",
+    "gambar": "assets/images/gambar-kartu-berita.svg",
+    "caption": "Koordinasi antar divisi menyiapkan robot.",
+    "ringkas": "Koordinasi antar divisi menyiapkan robot.",
+    "isi": [
+      "[CONTOH - ganti] Persiapan KRAI 2026 di UNEJ: Koordinasi antar divisi menyiapkan robot. Paragraf ini berisi ringkasan apa, kapan, dan di mana kegiatan berlangsung.",
+      "[CONTOH - ganti] Peran tim UKM Robotika IR64 POLIJE dan hasil yang dicapai.",
+      "[CONTOH - ganti] Penutup dan rencana kegiatan berikutnya."
+    ]
+  },
+  {
+    "id": "diklat-robot-soccer-2026",
+    "tipe": "kegiatan",
+    "kategori": "Kegiatan",
+    "judul": "Diklat Robot Soccer 2026",
+    "penyelenggara": "Diklat",
+    "peringkat": "",
+    "tahun": "2026",
+    "tanggal": "15 September 2026",
+    "gambar": "assets/images/gambar-kartu-berita.svg",
+    "caption": "Berbeda dari diklat line follower lalu.",
+    "ringkas": "Berbeda dari diklat line follower lalu.",
+    "isi": [
+      "[CONTOH - ganti] Diklat Robot Soccer 2026: Berbeda dari diklat line follower lalu. Paragraf ini berisi ringkasan apa, kapan, dan di mana kegiatan berlangsung.",
+      "[CONTOH - ganti] Peran tim UKM Robotika IR64 POLIJE dan hasil yang dicapai.",
+      "[CONTOH - ganti] Penutup dan rencana kegiatan berikutnya."
+    ]
+  },
+  {
+    "id": "demo-ukm-pkkmb",
+    "tipe": "kegiatan",
+    "kategori": "Kegiatan",
+    "judul": "IR64 di Demo UKM PKKMB",
+    "penyelenggara": "PKKMB",
+    "peringkat": "",
+    "tahun": "2026",
+    "tanggal": "28 Agustus 2026",
+    "gambar": "assets/images/gambar-kartu-berita.svg",
+    "caption": "Perkenalan UKM kepada mahasiswa baru.",
+    "ringkas": "Perkenalan UKM kepada mahasiswa baru.",
+    "isi": [
+      "[CONTOH - ganti] IR64 di Demo UKM PKKMB: Perkenalan UKM kepada mahasiswa baru. Paragraf ini berisi ringkasan apa, kapan, dan di mana kegiatan berlangsung.",
+      "[CONTOH - ganti] Peran tim UKM Robotika IR64 POLIJE dan hasil yang dicapai.",
+      "[CONTOH - ganti] Penutup dan rencana kegiatan berikutnya."
+    ]
+  },
+  {
+    "id": "riset-lanjutan-pasca-diklat",
+    "tipe": "kegiatan",
+    "kategori": "Kegiatan",
+    "judul": "Riset Lanjutan Pasca-Diklat",
+    "penyelenggara": "Biro Riset",
+    "peringkat": "",
+    "tahun": "2026",
+    "tanggal": "10 Agustus 2026",
+    "gambar": "assets/images/gambar-kartu-berita.svg",
+    "caption": "Anggota diarahkan ke biro riset.",
+    "ringkas": "Anggota diarahkan ke biro riset.",
+    "isi": [
+      "[CONTOH - ganti] Riset Lanjutan Pasca-Diklat: Anggota diarahkan ke biro riset. Paragraf ini berisi ringkasan apa, kapan, dan di mana kegiatan berlangsung.",
+      "[CONTOH - ganti] Peran tim UKM Robotika IR64 POLIJE dan hasil yang dicapai.",
+      "[CONTOH - ganti] Penutup dan rencana kegiatan berikutnya."
+    ]
+  },
+  {
+    "id": "modul-diklat-angkatan-baru",
+    "tipe": "kegiatan",
+    "kategori": "Kegiatan",
+    "judul": "Modul Diklat untuk Angkatan Baru",
+    "penyelenggara": "Modul",
+    "peringkat": "",
+    "tahun": "2026",
+    "tanggal": "1 Agustus 2026",
+    "gambar": "assets/images/gambar-kartu-berita.svg",
+    "caption": "Referensi belajar untuk tahun depan.",
+    "ringkas": "Referensi belajar untuk tahun depan.",
+    "isi": [
+      "[CONTOH - ganti] Modul Diklat untuk Angkatan Baru: Referensi belajar untuk tahun depan. Paragraf ini berisi ringkasan apa, kapan, dan di mana kegiatan berlangsung.",
+      "[CONTOH - ganti] Peran tim UKM Robotika IR64 POLIJE dan hasil yang dicapai.",
+      "[CONTOH - ganti] Penutup dan rencana kegiatan berikutnya."
+    ]
   }
 ];
+
+/* id berita yang tampil di bagian 'Kabar dari IR64' pada Beranda (urutan tampil) */
+var BERANDA_IDS = ['juara-olivia-xi','persiapan-krai-2026','diklat-robot-soccer-2026','demo-ukm-pkkmb','riset-lanjutan-pasca-diklat','modul-diklat-angkatan-baru'];
 
 var MODUL = [
   {
