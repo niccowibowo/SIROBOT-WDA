@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/detail-berita.css>
+    <link rel="stylesheet" href="css/detail-berita.css">
+    <link rel="stylesheet" href="css/animasi.css">
 </head>
 <body>
     <!-- Navbar: dibuat oleh js/komponen/navbar.js -->
@@ -19,21 +20,17 @@
     <main>
         <section class="detail-berita">
             <article>
-                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Beranda</a> <span>/</span> <a href="berita.html">Kegiatan</a> <span>/</span> <span aria-current="page">Detail Berita</span></nav>
-                <h1>[Judul Berita]</h1>
-                <p class="meta">[Tanggal publikasi] &middot; Kategori: [Berita]</p>
+                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Beranda</a> <span>/</span> <a href="berita.html" id="db-krumb">Kegiatan</a> <span>/</span> <span aria-current="page">Detail Berita</span></nav>
+                <h1 id="db-judul">[Judul Berita]</h1>
+                <p class="meta" id="db-meta"></p>
                 <figure>
-                    <img src="assets/images/gambar-kartu-berita.svg" alt="Foto utama berita">
-                    <figcaption>[Keterangan foto]</figcaption>
+                    <img id="db-gambar" src="" alt="">
+                    <figcaption id="db-caption"></figcaption>
                 </figure>
-                <div class="isi">
-                    <p>[Paragraf 1] Ringkasan kegiatan: apa, kapan, dan di mana acara berlangsung.</p>
-                    <p>[Paragraf 2] Peran tim UKM Robotika IR64 POLIJE dan hasil yang dicapai.</p>
-                    <p>[Paragraf 3] Penutup dan rencana kegiatan berikutnya.</p>
-                </div>
+                <div class="isi" id="db-isi"></div>
                 <p class="aksi">
                     <a href="prestasi.html" class="btn btn-join">Lihat Prestasi &rarr;</a>
-                    <a href="berita.html" class="kembali">&larr; Kembali ke Kegiatan</a>
+                    <a href="berita.html" class="kembali" id="db-kembali">&larr; Kembali ke Kegiatan</a>
                 </p>
             </article>
         </section>
@@ -45,5 +42,7 @@
     <script src="js/komponen/navbar.js"></script>
     <script src="js/komponen/footer.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/detail-berita.js"></script>
 </body>
 </html>

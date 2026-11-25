@@ -1,0 +1,213 @@
+.syarat, .kontak {
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding-inline: 24px;
+    box-sizing: border-box;
+}
+
+.syarat h2, .form-section h2, .kontak h2 {
+    font-size: 28px;
+    color: var(--navy);
+    margin-bottom: 24px;
+}
+
+/* SYARAT */
+.syarat ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.syarat li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px 22px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    font-weight: 500;
+}
+
+.syarat li::before {
+    content: "\2713";
+    flex: none;
+    width: 26px;
+    height: 26px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--red);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* FORMULIR PENDAFTARAN */
+.form-section {
+    width: 100%;
+    background: var(--bg-soft);
+    padding-block: 64px;
+    padding-inline: max(24px, calc((100% - var(--maxw)) / 2 + 24px));
+    box-sizing: border-box;
+}
+
+.form-container h2 {
+    margin-bottom: 8px;
+}
+
+.form-desc {
+    color: var(--muted);
+    margin-bottom: 28px;
+    font-size: 15px;
+}
+
+.form-pendaftaran {
+    background: #fff;
+    padding: 32px;
+    border-radius: var(--radius, 16px);
+    box-shadow: var(--shadow);
+    display: grid;
+    gap: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--navy);
+    background: #f8fafc;
+    transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--red);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.form-action {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4px;
+}
+
+.btn-submit {
+    background: var(--red);
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s, opacity 0.2s;
+}
+
+.btn-submit:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+/* KONTAK */
+.kontak address {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+    font-style: normal;
+}
+
+.kontak address p {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 18px 22px;
+    display: grid;
+    gap: 4px;
+    word-break: break-word;
+}
+
+.kontak address strong {
+    font-size: 11px;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.kontak address a {
+    color: var(--red);
+    font-weight: 600;
+}
+
+.kontak address a:hover {
+    text-decoration: underline;
+}
+
+.kontak iframe {
+    width: 100%;
+    height: 340px;
+    border: 0;
+    border-radius: var(--radius);
+    background: var(--bg-soft);
+    box-shadow: var(--shadow);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-pendaftaran {
+        padding: 24px 20px;
+    }
+    .btn-submit {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .syarat, .kontak {
+        padding-inline: 16px;
+    }
+    .form-section {
+        padding-block: 48px;
+        padding-inline: 16px;
+    }
+    .syarat h2, .form-section h2, .kontak h2 {
+        font-size: 24px;
+    }
+}

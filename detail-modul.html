@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Modul | SIROBOT UKM Robotika IR64 POLIJE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/detail-modul.css">
+    <link rel="stylesheet" href="css/animasi.css">
+</head>
+<body>
+    <!-- Navbar: dibuat oleh js/komponen/navbar.js -->
+    <header data-komponen="navbar" data-aktif="modul"></header>
+
+    <main>
+        <section class="detail-modul">
+            <figure class="sampul">
+                <img id="dm-gambar" src="" alt="">
+            </figure>
+            <article>
+                <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Beranda</a> <span>/</span> <a href="modul.html">Edukasi</a> <span>/</span> <span aria-current="page">Detail Modul</span></nav>
+                <span class="status" id="dm-level"></span>
+                <h1 id="dm-judul"></h1>
+                <p class="deskripsi" id="dm-deskripsi"></p>
+                <ul class="meta">
+                    <li><strong>Format</strong> PDF</li>
+                    <li><strong>Ukuran</strong> <span id="dm-ukuran"></span></li>
+                    <li><strong>Diunggah</strong> <span id="dm-tanggal"></span></li>
+                </ul>
+                <p class="aksi">
+                    <!-- ISI: ganti dengan berkas PDF di assets/modul/ -->
+                    <a id="dm-unduh" href="assets/modul/C_E41261032_Moch_Farhan_Aisy _js.pdf" class="btn btn-join" download>Unduh PDF</a>
+                    <a id="dm-lihat" href="assets/modul/C_E41261032_Moch_Farhan_Aisy _js.pdf" class="btn btn-putih" target="_blank" rel="noopener">Lihat PDF</a>
+                </p>
+                <p><a href="modul.html" class="kembali">&larr; Kembali ke daftar modul</a></p>
+            </article>
+        </section>
+
+        <section class="pratinjau">
+            <h2 class="garis-merah">Pratinjau PDF</h2>
+            <object id="dm-objek" type="application/pdf">
+                <p>Pratinjau tidak tersedia. <a id="dm-buka" href="#">Buka PDF</a></p>
+            </object>
+        </section>
+    </main>
+
+    <!-- Footer: dibuat oleh js/komponen/footer.js -->
+    <footer data-komponen="footer"></footer>
+
+    <script src="js/komponen/navbar.js"></script>
+    <script src="js/komponen/footer.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/detail-modul.js"></script>
+</body>
+</html>

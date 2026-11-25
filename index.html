@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/kartu.css">
     <link rel="stylesheet" href="css/visi-misi.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animasi.css">
+
 </head>
 <body>
     <!-- Navbar: dibuat oleh js/komponen/navbar.js -->
@@ -24,11 +26,11 @@
             <div class="container hero-inner">
                 <div class="hero-text">
                     <p class="eyebrow">WE ARE</p>
-                    <h1>IR64<br>Specialized in Robotics Engineering</h1>
+                    <h1>IR64 <span>Specialized in Robotics Engineering</span></h1>
                     <p class="lead">Wadah inovasi mahasiswa POLIJE untuk merancang, membangun, dan mengembangkan teknologi robotika cerdas
                         melalui kolaborasi, kreativitas, dan rekayasa teknologi.</p>
                     <p class="hero-aksi">
-                        <a href="pendaftaran.html" class="btn btn-join">Join Us &rarr;</a>
+                        <a href="pendaftaran.html" class="btn btn-join">Join Us</a>
                         <a href="tentang-kami.html" class="btn btn-putih">Tentang kami</a>
                     </p>
                 </div>
@@ -42,16 +44,16 @@
             <h2>Statistik UKM</h2>
             <ul>
                 <li>
-                    <strong>19+</strong>
-                    <p>Prestasi yang diraih</p>
+                    <span class="stat-ikon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span>
+                    <div><strong>19+</strong><p>Prestasi yang di raih</p></div>
                 </li>
                 <li>
-                    <strong>20+</strong>
-                    <p>berita</p>
+                    <span class="stat-ikon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                    <div><strong>120+</strong><p>Anggota Aktif</p></div>
                 </li>
                 <li>
-                    <strong>120+</strong>
-                    <p>anggota aktif</p>
+                    <span class="stat-ikon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span>
+                    <div><strong id="stat-berita">10+</strong><p>Berita Tersedia</p></div>
                 </li>
             </ul>
         </section>
@@ -59,7 +61,7 @@
         <!-- Sekilas Profil -->
         <section class="profil">
             <h2>Sekilas Profil UKM ROBOTIKA IR64</h2>
-            <img src="assets/images/anggota-ir64.svg" alt="Foto bersama anggota UKM Robotika IR64 POLIJE">
+            <div class="profil-foto"><img src="assets/images/anggota-ir64.svg" alt="Foto bersama anggota UKM Robotika IR64 POLIJE"></div>
             <p>Wadah inovasi mahasiswa POLIJE untuk merancang, membangun, dan mengembangkan teknologi robotika cerdas
                 melalui kolaborasi, kreativitas, dan rekayasa teknologi.</p>
             <a href="pendaftaran.html">Bergabung sekarang</a>
@@ -68,8 +70,10 @@
         <!-- Sekilas Pengurus -->
         <section class="pengurus-ringkas" id="struktur">
             <h2>Kenali pengurus di balik IR64 POLIJE</h2>
+            <div class="pengurus-foto">
             <img src="assets/images/ketua-umum.svg" alt="Abdillah Aziz Putra Susan - Ketua Umum IR64 POLIJE">
             <img src="assets/images/wakil-ketua-umum.svg" alt="Muhammad Farel Dwi M. - Wakil Ketua Umum IR64 POLIJE">
+            </div>
             <article>
                 <h3>Abdillah Aziz Putra Susan</h3>
                 <p><strong>Ketua Umum IR 64 POLIJE</strong></p>
@@ -82,7 +86,7 @@
                 <p>Mendukung kepemimpinan, memperkuat kolaborasi, dan memastikan setiap inovasi IR 64 POLIJE berkembang
                     menjadi langkah nyata menuju kemajuan teknologi robotika.</p>
             </article>
-            <p><a href="struktur.html">Lihat Struktur Organisasi kami <span aria-hidden="true">&rarr;</span></a></p>
+            <p><a href="struktur.html">Lihat Struktur Organisasi kami</a></p>
         </section>
 
         <!-- Visi dan Misi -->
@@ -105,7 +109,7 @@
             </article>
         </section>
 
-        <!-- sekilas berita -->
+        <!-- sekilas berita: kartu dibuat oleh js/beranda.js dari js/data.js -->
         <section class="kabar">
             <h2>Kabar dari IR64</h2>
             <p>Ikuti informasi, prestasi, dan kegiatan terbaru dari UKM ROBOTIKA IR64</p>
@@ -113,33 +117,11 @@
 
             <nav aria-label="Filter kabar">
                 <ul class="pill-list">
-                    <li><a href="berita.html" class="aktif">Semua</a></li>
-                    <li><a href="berita.html">Prestasi</a></li>
-                    <li><a href="berita.html">Kegiatan</a></li>
+                    <li><a href="berita.html" class="aktif" data-filter="">Semua</a></li>
+                    <li><a href="berita.html" data-filter="Prestasi">Prestasi</a></li>
+                    <li><a href="berita.html" data-filter="Kegiatan">Kegiatan</a></li>
                 </ul>
             </nav>
-
-            <article>
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Tim UKM Robotika pada Olivia XI 2026">
-                <h3>Juara Nasional Olivia XI 2026</h3>
-                <p>Prestasi · Vokasi UNESA</p>
-                <p>Kategori Programmable Logic Controller.</p>
-                <a href="berita.html">Baca Selengkapnya</a>
-            </article>
-            <article>
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto kegiatan UKM Robotika">
-                <h3>[Judul Berita]</h3>
-                <p>[Kategori · Penyelenggara]</p>
-                <p>[Deskripsi singkat berita.]</p>
-                <a href="berita.html">Baca Selengkapnya</a>
-            </article>
-            <article>
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto kegiatan UKM Robotika">
-                <h3>[Judul Berita]</h3>
-                <p>[Kategori · Penyelenggara]</p>
-                <p>[Deskripsi singkat berita.]</p>
-                <a href="berita.html">Baca Selengkapnya</a>
-            </article>
         </section>
 
         <!-- Ajakan Bergabung -->
@@ -162,6 +144,7 @@
     <script src="js/komponen/navbar.js"></script>
     <script src="js/komponen/footer.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/beranda.js"></script>
 </body>
 </html>

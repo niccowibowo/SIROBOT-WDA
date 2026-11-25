@@ -1,0 +1,9 @@
+/* kelola.css kerangka bersama halaman KELOLA
+   (kelola-berita, kelola-modul, kelola-persuratan)
+   Dimuat setelah admin-base.css, admin-header.css, 
+   admin-sidebar.css, notifikasi.css
+*/
+.form-panel { max-width: 1000px; }
+.form-panel > h2 { padding-bottom: 14px; border-bottom: 1px solid var(--garis); margin-bottom: 22px; }
+.catatan-form { font-size: 12px; color: var(--abu); margin-top: 6px; }
+.judul-tabel { font-size: 18px; font-weight: 700; margin: 8px 0 14px; }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran &amp; Kontak | SIROBOT UKM Robotika IR64 POLIJE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/pendaftaran.css">
+</head>
+<body>
+    <!-- Navbar: dibuat oleh js/komponen/navbar.js -->
+    <header data-komponen="navbar" data-aktif=""></header>
+
+    <main>
+        <section class="judul-halaman">
+            <h1>Bergabung dengan <span class="sorot">IR64 POLIJE</span></h1>
+            <p>Daftarkan dirimu dan mulai berkarya di dunia robotika.</p>
+        </section>
+
+        <section class="syarat">
+            <h2 class="garis-merah">Syarat Pendaftaran</h2>
+            <ul>
+                <li> Mahasiswa aktif politeknik negeri Jember maksimal semester 3 untuk D3 dan semester 5 untuk D4</li>
+                <li>Mampu bekerja secara tim </li>
+                <li>Dapat belajar dengan baik</li>
+            </ul>
+        </section>
+
+<!-- FORMULIR PENDAFTARAN (Gantikan hanya bagian <section class="alur">...</section> dengan ini) -->
+        <section class="form-section" id="daftar">
+            <div class="form-container">
+                <h2>Formulir Pendaftaran</h2>
+                <p class="form-desc">Lengkapi data diri di bawah ini dengan benar untuk mendaftar sebagai calon anggota baru.</p>
+
+                <form action="#" method="POST" class="form-pendaftaran" id="formPendaftaran">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap sesuai KTM" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nim">NIM</label>
+                            <input type="text" id="nim" name="nim" placeholder="Contoh: E4125xxxx" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prodi">Program Studi</label>
+                            <input type="text" id="prodi" name="prodi" placeholder="Contoh: Teknik Informatika / Teknik Komputer" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="whatsapp">No. WhatsApp</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="Contoh: 081234567890" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alasan">Alasan Bergabung</label>
+                        <textarea id="alasan" name="alasan" rows="4" placeholder="Ceritakan minatmu di bidang robotika dan alasan ingin bergabung dengan IR64 POLIJE..." required></textarea>
+                    </div>
+
+                    <div class="form-action">
+                        <button type="submit" class="btn-submit">Kirim Pendaftaran &rarr;</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="kontak" id="kontak">
+            <h2 class="garis-merah">Kontak &amp; Lokasi</h2>
+            <address>
+                <p><strong>WhatsApp</strong><a href="https://wa.me/628xxxxxxxxxx">[+62 ...]</a></p>
+                <p><strong>Instagram</strong><a href="https://www.instagram.com/ir64.polije/">@ir64.polije</a></p>
+                <p><strong>Email</strong><a href="mailto:email-ukm@contoh.ac.id">[email UKM]</a></p>
+                <p><strong>Lokasi Sekretariat</strong><span>Jl. Mastrip No.3/80, Lingkungan Panji, Sumbersari, Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68121, Indonesia</span></p>
+            </address>
+            <!-- ISI: ganti src dengan tautan embed Google Maps -->
+            <iframe
+            src="https://maps.google.com/maps?q=UKM%20ROBOTIKA%20POLIJE&output=embed"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+
+    <!-- Footer: dibuat oleh js/komponen/footer.js -->
+    <footer data-komponen="footer"></footer>
+
+    <script src="js/komponen/navbar.js"></script>
+    <script src="js/komponen/footer.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

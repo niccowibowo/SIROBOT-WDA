@@ -1,6 +1,4 @@
-/* komponen/footer.js : FOOTER satu sumber untuk semua halaman publik
-   Pakai di halaman:  <footer data-komponen="footer"></footer>
-   Gaya: css/footer.css
+/* Gaya: css/footer.css
   */
 (function () {
   'use strict';
@@ -9,13 +7,11 @@
 
   // ISI kontak di SINI saja, otomatis berlaku di semua halaman.
   var KONTAK = {
-    whatsappLink: 'https://wa.me/628xxxxxxxxxx',   // format 62..., tanpa 0 / +
-    whatsappTeks: '[Nomor WhatsApp UKM]',
-    emailLink: 'mailto:email-ukm@contoh.ac.id',
-    emailTeks: '[Email UKM]',
-    instagram: '#',
-    tiktok: '#',
-    youtube: '#'
+    whatsappLink: 'https://wa.me/62132648562',   // format 62..., tanpa 0 / +
+    whatsappTeks: '085732444518',
+    emailLink: 'ukm.robotika@polije.ac.id ',
+    emailTeks: 'ukm.robotika@polije.ac.id ',
+    instagram: 'https://www.instagram.com/ir64.polije?igsh=MXVicXVndjIxNWNucg%3D%3D',
   };
 
   wadah.innerHTML =
@@ -32,9 +28,8 @@
       '<p><strong>WhatsApp</strong><br><a href="' + KONTAK.whatsappLink + '">' + KONTAK.whatsappTeks + '</a></p>' +
       '<p><strong>Email</strong><br><a href="' + KONTAK.emailLink + '">' + KONTAK.emailTeks + '</a></p>' +
     '</address>' +
-    '<p><strong>SIROBOT</strong> – Akun media sosial kami:<br>' +
-      '<a href="' + KONTAK.instagram + '">Instagram</a> | ' +
-      '<a href="' + KONTAK.tiktok + '">TikTok</a> | ' +
-      '<a href="' + KONTAK.youtube + '">YouTube</a></p>' +
+    '<p><img src="assets/images/Logo Footer.png" alt="Logo SIROBOT" class="footer-logo"> – Akun media sosial kami:<br>' +
+      '<a href="' + KONTAK.instagram + '">Instagram</a>  ' +
     '<p><small>&copy; 2026 UKM Robotika IR64 POLIJE</small></p>';
 })();
+

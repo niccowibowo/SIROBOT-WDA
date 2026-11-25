@@ -1,0 +1,72 @@
+/* ---------- Kartu: naik, latar bergeser, bayangan merah, gambar zoom ---------- */
+.kabar article, .daftar-berita article, .modul-daftar article, .prestasi-daftar article {
+    background: linear-gradient(120deg, #fff 0%, #fff 45%, var(--red-soft) 100%);
+    background-size: 250% 100%; background-position: 0 0;
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease, background-position .6s ease;
+}
+.kabar article:hover, .daftar-berita article:hover, .modul-daftar article:hover, .prestasi-daftar article:hover {
+    transform: translateY(-8px);
+    background-position: 100% 0;
+    box-shadow: 0 0 0 2px rgba(229, 57, 53, .25), 0 18px 40px rgba(229, 57, 53, .28);
+}
+.kabar article img, .daftar-berita article img, .modul-daftar article img, .prestasi-daftar article img {
+    transition: transform .5s ease;
+}
+.kabar article:hover img, .daftar-berita article:hover img,
+.modul-daftar article:hover img, .prestasi-daftar article:hover img { 
+    transform: scale(1.08); 
+}
+ 
+.kabar article a, .daftar-berita article a, .modul-daftar article a { 
+    transition: transform .2s, box-shadow .2s, background .2s; 
+}
+.daftar-berita article:hover > a, .modul-daftar article:hover > a, .kabar article:hover > a { 
+    box-shadow: 0 6px 16px rgba(229, 57, 53, .4); 
+}
+.prestasi-daftar article:hover h3 a { 
+    color: var(--red); 
+}
+ 
+/* ---------- Sorotan utama ---------- */
+.sorotan article img { 
+    transition: transform .8s ease; 
+}
+.sorotan article:hover img { 
+    transform: scale(1.06); 
+}
+ 
+/* ---------- Pill filter, nomor halaman, tombol ---------- */
+.pill-list a, .halaman a { 
+    transition: transform .2s, background .2s, box-shadow .2s, color .2s; 
+}
+.pill-list a:hover, .halaman a:hover { 
+    transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0, 0, 0, .12); 
+}
+.btn { 
+    position: relative; overflow: hidden; 
+}
+.btn:active { 
+    transform: scale(.96); 
+}
+ 
+/* ---------- Menu navbar: garis merah meluncur + latar lembut ---------- */
+header nav a:not(:has(img)):not([class*="logo"]):not(.btn) {
+    position: relative; transition: color .25s, background .25s; border-radius: 8px;
+}
+header nav a:not(:has(img)):not([class*="logo"]):not(.btn)::after {
+    content: ""; position: absolute; left: 12%; right: 12%; bottom: 2px; height: 3px;
+    background: var(--red); border-radius: 2px; transform: scaleX(0); transform-origin: left;
+    transition: transform .3s ease; pointer-events: none;
+}
+header nav a:not(:has(img)):not([class*="logo"]):not(.btn):hover { 
+    color: var(--red); background: var(--red-soft); 
+}
+header nav a:not(:has(img)):not([class*="logo"]):not(.btn):hover::after { 
+    transform: scaleX(1); 
+}
+
+/* hormati pengguna yang mematikan animasi */
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+}

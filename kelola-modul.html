@@ -4,11 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelola Modul Diklat | SIROBOT UKM Robotika IR64 POLIJE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin-base.css">
+    <link rel="stylesheet" href="css/admin-header.css">
+    <link rel="stylesheet" href="css/admin-sidebar.css">
+    <link rel="stylesheet" href="css/notifikasi.css">
+    <link rel="stylesheet" href="css/kelola.css">
+    <link rel="stylesheet" href="css/kelola-modul.css">
+    <script src="js/auth"></script>
 </head>
-<body>
-    <main>
-        <h1>Kelola Modul Diklat</h1>
-        <p><a href="dashboard.html">&larr; Kembali ke Dashboard</a></p>
+<body class="admin page-kelola-modul">
+    <!-- Header & menu samping dibuat oleh js/komponen/admin-header.js dan admin-menu.js -->
+    <header class="admin-header" data-komponen="admin-header"></header>
+    <nav class="sidebar" data-komponen="admin-menu" data-aktif="kelola-modul"></nav>
+
+    <main class="admin-main">
+        <header class="kepala">
+            <div>
+                <h1>Kelola Modul Diklat</h1>
+                <p>Unggah dan atur modul pembelajaran.</p>
+            </div>
+            <a href="#form-modul" class="btn btn-merah">+ Unggah Modul</a>
+        </header>
+        <form class="filter-bar" data-saring="#tabel-modul" data-kosong="#kosong-modul" role="search" action="#">
+            <div class="field lebar"><label for="cari-modul">Cari modul</label><input type="search" id="cari-modul" placeholder="Ketik judul modul"></div>
+            <div class="field"><label for="f-kategori">Kategori</label><select id="f-kategori" name="f-kategori"><option value="">Semua kategori</option><option>Pemula</option><option>Menengah</option><option>Lanjutan</option></select></div>
+            <div class="field"><label for="f-tahun">Tahun</label><select id="f-tahun" name="f-tahun"><option value="">Semua tahun</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option></select></div>
+            <button type="button" class="btn btn-garis" data-reset-saring>Reset</button>
+        </form>
+
+        <div class="tabel-wrap"><table class="tabel" id="tabel-modul">
+            <caption class="sr-only">Daftar modul</caption>
+            <thead><tr><th>Judul Modul</th><th>Kategori</th><th>Tahun</th><th>Berkas</th><th>Aksi</th></tr></thead>
+            <tbody>
+                    <tr><td>Dasar Arduino</td><td>Pemula</td><td>2026</td><td>dasar-arduino.pdf</td><td><span class="aksi-baris"><a href="#form-modul" class="ubah" data-ubah>Ubah</a><a href="hapus-konfirmasi.html" data-hapus>Hapus</a></span></td></tr>
+                    <tr><td>Sensor &amp; Aktuator</td><td>Menengah</td><td>2025</td><td>sensor-aktuator.pdf</td><td><span class="aksi-baris"><a href="#form-modul" class="ubah" data-ubah>Ubah</a><a href="hapus-konfirmasi.html" data-hapus>Hapus</a></span></td></tr>
+                    <tr><td>Kontrol PID</td><td>Lanjutan</td><td>2025</td><td class="tidak-ada"><span>Belum ada berkas</span></td><td><span class="aksi-baris"><a href="#form-modul" class="ubah" data-ubah>Ubah</a><a href="hapus-konfirmasi.html" data-hapus>Hapus</a></span></td></tr>
+            </tbody>
+        </table></div>
+        <div class="kosong-tabel" id="kosong-modul" data-kosong hidden><strong>Modul tidak ditemukan</strong>Coba ubah kata kunci atau filter.</div>
+
+        <section class="panel form-panel" id="form-modul">
+            <h2>Unggah Modul</h2>
+            <form data-simpan action="#" method="post" novalidate>
+                <div class="form-grid">
+                    <div class="field penuh"><label for="judul">Judul Modul</label><input type="text" id="judul" name="judul" placeholder="Tulis judul modul"></div>
+                    <div class="field"><label for="kategori">Kategori</label><select id="kategori" name="kategori"><option value="">Pilih</option><option>Pemula</option><option>Menengah</option><option>Lanjutan</option></select></div>
+                    <div class="field"><label for="tahun-modul">Tahun</label><input type="text" id="tahun-modul" name="tahun" placeholder="2026"></div>
+                    <div class="field penuh"><label for="berkas">Berkas Modul (PDF)</label><input type="file" id="berkas" name="berkas" accept="application/pdf"><p class="catatan-form">Hanya PDF, maksimal 10 MB.</p></div>
+                </div>
+                <div class="aksi-form"><button type="submit" class="btn btn-merah">Simpan</button><button type="reset" class="btn tombol-reset">Batal</button></div>
+            </form>
+        </section>
     </main>
+
+    <script src="js/komponen/admin-header.js"></script>
+    <script src="js/komponen/admin-menu.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/admin.js"></script>
 </body>
 </html>

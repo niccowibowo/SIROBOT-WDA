@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfirmasi Hapus | SIROBOT UKM Robotika IR64 POLIJE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin-base.css">
+    <link rel="stylesheet" href="css/admin-header.css">
+    <link rel="stylesheet" href="css/admin-sidebar.css">
+    <link rel="stylesheet" href="css/notifikasi.css">
+    <link rel="stylesheet" href="css/hapus-konfirmasi.css">
+    <script src="js/auth"></script>
+</head>
+<body class="admin page-hapus-konfirmasi">
+    <!-- Header & menu samping dibuat oleh js/komponen/admin-header.js dan admin-menu.js -->
+    <header class="admin-header" data-komponen="admin-header"></header>
+    <nav class="sidebar" data-komponen="admin-menu" data-aktif=""></nav>
+
+    <main class="admin-main">
+        <section class="konfirmasi">
+            <h1>Hapus data ini?</h1>
+            <p>Data yang dihapus tidak dapat dikembalikan. Halaman ini hanya cadangan bila dialog JavaScript tidak aktif.</p>
+            <p class="aksi-form"><a href="javascript:history.back()" class="btn btn-garis">Batal</a><a href="dashboard.html" class="btn btn-merah">Ya, Hapus</a></p>
+        </section>
+    </main>
+
+    <script src="js/komponen/admin-header.js"></script>
+    <script src="js/komponen/admin-menu.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

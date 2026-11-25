@@ -16,7 +16,6 @@
 html { height: 100%; }
 
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
   margin: 0;
   min-height: 100vh;
   padding: 10px;
@@ -28,41 +27,42 @@ body {
   background: #fff;
   -webkit-font-smoothing: antialiased;
 }
-.illustration {
-  grid-column: 1;
-  grid-row: 1 / 4;
-  width: 100%;
-  height: 100%;
-  min-height: calc(100vh - 20px);
-  background-image: url('../assets/images/IconHologram.png');
-  background-size: cover;
+
+.logo {
+  display: inline-block; /* Wajib ada agar width & height tetap aktif saat teks hilang */
+  width: 120px;
+  height: 20px;
+  background-image: url('../assets/images/LogoSirobot.svg');
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-.logo {
-    width: 120px;
-    height: 60px;
-    background-image: url('../assets/images/LogoSirobot.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
-/* <main> dilepas supaya <img>, <header>, <section>, <footer> bisa ditata di satu grid */
+
 main { display: contents; }
 
 /* ===== Panel maskot (kiri) ===== */
-main >  {
-  background-image: url('../assets/images/IconHologram.png');
-  background-size: cover;
+main > img {
   grid-column: 1;
   grid-row: 1 / 4;
   width: 100%;
-  height: 100%;
+  height: 110%;
   min-height: calc(100vh - 20px);
   object-fit: cover;
   object-position: left bottom;
   background: var(--red);
-  color: #fff;               /* warna teks alt bila gambar belum ada */
+  color: #fff;               
   border-radius: 16px;
 }
 
@@ -246,7 +246,7 @@ footer p { margin: 0; font-size: 10px; color: var(--muted); }
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
   }
-  main > .illustration { display: none; }
+  main > img { display: none; }
   header, main > section, footer { grid-column: 1; }
   header { align-self: start; padding-top: 32px; margin-bottom: 32px; }
   main > section { align-self: start; }

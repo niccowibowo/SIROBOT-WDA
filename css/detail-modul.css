@@ -1,0 +1,29 @@
+/*detail-modul.css : halaman DETAIL MODUL
+   Dimuat setelah css/base.css, navbar.css, footer.css
+*/
+.detail-modul { display: grid; grid-template-columns: 5fr 6fr; gap: 48px; align-items: start; padding-top: 40px; }
+.detail-modul .sampul img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+.detail-modul .status {
+    display: inline-block; font-size: 12px; font-weight: 600; color: #0b6bcb;
+    background: #e8f1fd; padding: 4px 12px; border-radius: 999px; margin-bottom: 12px;
+}
+.detail-modul h1 { font-size: 38px; font-weight: 800; margin-bottom: 14px; }
+.detail-modul .deskripsi { font-size: 17px; line-height: 1.75; color: var(--muted); margin-bottom: 22px; }
+.detail-modul .meta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
+.detail-modul .meta li { background: var(--bg-soft); border-radius: 12px; padding: 10px 16px; font-size: 14px; }
+.detail-modul .meta strong { display: block; font-size: 11px; letter-spacing: .4px; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.detail-modul .aksi { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+.detail-modul .kembali { color: var(--muted); font-weight: 600; font-size: 14px; }
+.detail-modul .kembali:hover { color: var(--red); }
+
+.pratinjau { padding-top: 0; }
+.pratinjau h2 { font-size: 28px; color: var(--navy); margin-bottom: 20px; }
+.pratinjau object { width: 100%; height: 640px; border: 1px solid #e5e7eb; border-radius: var(--radius); background: var(--bg-soft); }
+.pratinjau object p { padding: 32px; text-align: center; color: var(--muted); }
+.pratinjau object a { color: var(--red); font-weight: 600; }
+
+@media (max-width: 900px) {
+    .detail-modul { grid-template-columns: 1fr; gap: 28px; }
+    .detail-modul h1 { font-size: 28px; }
+    .pratinjau object { height: 480px; }
+}

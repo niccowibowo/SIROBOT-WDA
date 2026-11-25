@@ -3,79 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri Prestasi | SIROBOT UKM Robotika IR64 POLIJE</title>
+    <title>Berita | SIROBOT UKM Robotika IR64 POLIJE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/prestasi.css">
+    <link rel="stylesheet" href="css/kartu.css">
+    <link rel="stylesheet" href="css/berita.css">
+    <link rel="stylesheet" href="css/animasi.css">
 </head>
 <body>
     <!-- Navbar: dibuat oleh js/komponen/navbar.js -->
     <header data-komponen="navbar" data-aktif="berita"></header>
 
     <main>
+        <!-- Judul -->
         <section class="judul-halaman">
-            <h1>Galeri <span class="sorot">Prestasi</span></h1>
-            <p>Capaian UKM Robotika IR64 POLIJE dalam berbagai kompetisi.</p>
+            <h1>Berita & Prestasi <span class="sorot">IR 64 Robotics</span></h1>
+            <p>Kabar terbaru dari IR 64 Robotics</p>
         </section>
 
-        <section class="prestasi-daftar">
-            <nav aria-label="Filter tingkat">
-                <ul class="pill-list">
-                    <li><a href="prestasi.html" class="aktif">Semua</a></li>
-                    <li><a href="prestasi.html?tingkat=nasional">Nasional</a></li>
-                    <li><a href="prestasi.html?tingkat=regional">Regional</a></li>
-                    <li><a href="prestasi.html?tingkat=internal">Internal</a></li>
-                </ul>
-            </nav>
-
-            <article data-tingkat="nasional">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto prestasi">
-                <p class="peringkat">[Peringkat] &middot; [Tahun]</p>
-                <h3>[Nama Lomba / Kompetisi]</h3>
-                <p>[Deskripsi singkat prestasi]</p>
+        <!-- Sorotan utama -->
+        <section class="sorotan">
+            <h2>Sorotan utama</h2>
+            <p>Berita terbaru dan paling penting seputar kegiatan UKM IR64 Robotics.</p>
+            <article>
+                <img src="assets/images/Sambutan Mahasiswa Baru di Robotika.jpeg" alt="Penyambutan Calon anggota baru">
+                <p><strong>Update Now</strong></p>
+                <h3>Penyambutan Calon anggota baru</h3>
+                <p>Penyambutan Calon anggota baru pada tanggal 27 Agustus 2023 kegiatan ini dilakukan agar calon anggota baru mengenal lebih dekat lingkungan organisasi, anggota serta aktivitas yang di lakukan di IR 64 Robotika..</p>
+                <a href="detail-berita.html?id=juara-olivia-xi">Baca Selengkapnya</a>
             </article>
-            <article data-tingkat="regional">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto prestasi">
-                <p class="peringkat">[Peringkat] &middot; [Tahun]</p>
-                <h3>[Nama Lomba / Kompetisi]</h3>
-                <p>[Deskripsi singkat prestasi]</p>
-            </article>
-            <article data-tingkat="internal">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto prestasi">
-                <p class="peringkat">[Peringkat] &middot; [Tahun]</p>
-                <h3>[Nama Lomba / Kompetisi]</h3>
-                <p>[Deskripsi singkat prestasi]</p>
-            </article>
-            <article data-tingkat="nasional">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto prestasi">
-                <p class="peringkat">[Peringkat] &middot; [Tahun]</p>
-                <h3>[Nama Lomba / Kompetisi]</h3>
-                <p>[Deskripsi singkat prestasi]</p>
-            </article>
-            <article data-tingkat="nasional">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto prestasi">
-                <p class="peringkat">[Peringkat] &middot; [Tahun]</p>
-                <h3>[Nama Lomba / Kompetisi]</h3>
-                <p>[Deskripsi singkat prestasi]</p>
-            </article>
-            <article data-tingkat="regional">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto prestasi">
-                <p class="peringkat">[Peringkat] &middot; [Tahun]</p>
-                <h3>[Nama Lomba / Kompetisi]</h3>
-                <p>[Deskripsi singkat prestasi]</p>
-            </article>
-            <nav class="halaman" aria-label="Halaman">
-                <a href="#" aria-label="Sebelumnya">&lsaquo;</a>
-                <a href="#" class="aktif" aria-current="page">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#" aria-label="Berikutnya">&rsaquo;</a>
-            </nav>
         </section>
+
+        <!-- Daftar berita -->
+        <section class="daftar-berita">
+            <h2>Daftar Berita & Prestasi</h2>
+            <form action="#" method="get">
+                <p>
+                    <label for="cari">Cari topik</label>
+                    <input type="search" id="cari" name="cari" placeholder="Cari topik disini...">
+                </p>
+                <p>
+                    <label for="kategori">Kategori</label>
+                    <select id="kategori" name="kategori">
+                        <option>Semua Kategori</option>
+                        <option>Prestasi</option>
+                        <option>Kegiatan</option>
+                        <option>Organisasi</option>
+                    </select>
+                    <label for="urutan">Urutkan</label>
+                    <select id="urutan" name="urutan">
+                        <option>Terbaru</option>
+                        <option>Terlama</option>
+                    </select>
+                </p>
+            </form>
+
+            <article data-kategori="prestasi" data-urut="0">
+                <img src="assets/images/gambar-kartu-berita.svg" alt="Tim UKM Robotika pada Olivia XI 2026">
+                <h3>Juara Nasional Olivia XI 2026</h3>
+                <p>Prestasi · Vokasi UNESA</p>
+                <p>Kategori Programmable Logic Controller.</p>
+                <a href="detail-berita.html?id=juara-olivia-xi">Baca Selengkapnya</a>
+            </article>
+            <article data-kategori="kegiatan" data-urut="1">
+                <img src="assets/images/Sambutan Mahasiswa Baru di Robotika.jpeg" alt="Foto kegiatan UKM Robotika">
+                <h3>Penyambutan Calon anggota baru</h3>
+                <p>Kegiatan · Divisi Edukasi</p>
+                <p>Baca kabar lengkapnya di halaman detail.</p>
+                <a href="detail-berita.html?id=Penyambutan-Calon">Baca Selengkapnya</a>
+            </article>
+            <article data-kategori="kegiatan" data-urut="2">
+                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto kegiatan UKM Robotika">
+                <h3>Latihan Bersama Line Follower</h3>
+                <p>Kegiatan · Divisi Riset</p>
+                <p>Baca kabar lengkapnya di halaman detail.</p>
+                <a href="detail-berita.html?id=latihan-line-follower">Baca Selengkapnya</a>
+            </article>
+            <article data-kategori="organisasi" data-urut="3">
+                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto kegiatan UKM Robotika">
+                <h3>Pergantian Pengurus UKM Robotika</h3>
+                <p>Organisasi · Pengurus UKM</p>
+                <p>Baca kabar lengkapnya di halaman detail.</p>
+                <a href="detail-berita.html?id=pergantian-pengurus">Baca Selengkapnya</a>
+            </article>
+            <article data-kategori="kegiatan" data-urut="4">
+                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto kegiatan UKM Robotika">
+                <h3>Kunjungan Industri Otomasi</h3>
+                <p>Kegiatan · Divisi Humas</p>
+                <p>Baca kabar lengkapnya di halaman detail.</p>
+                <a href="detail-berita.html?id=kunjungan-industri">Baca Selengkapnya</a>
+            </article>
+            <article data-kategori="prestasi" data-urut="5">
+                <img src="assets/images/gambar-kartu-berita.svg" alt="Foto kegiatan UKM Robotika">
+                <h3>Juara Regional Kontes Robot Jawa Timur</h3>
+                <p>Prestasi · Kontes Robot Regional</p>
+                <p>Baca kabar lengkapnya di halaman detail.</p>
+                <a href="detail-berita.html?id=juara-krsti-regional">Baca Selengkapnya</a>
+            </article>
+        </section>
+    
     </main>
 
     <!-- Footer: dibuat oleh js/komponen/footer.js -->
@@ -84,6 +114,6 @@
     <script src="js/komponen/navbar.js"></script>
     <script src="js/komponen/footer.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/prestasi.js"></script>
+    <script src="js/berita.js"></script>
 </body>
 </html>

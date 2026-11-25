@@ -4,11 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelola Persuratan | SIROBOT UKM Robotika IR64 POLIJE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin-base.css">
+    <link rel="stylesheet" href="css/admin-header.css">
+    <link rel="stylesheet" href="css/admin-sidebar.css">
+    <link rel="stylesheet" href="css/notifikasi.css">
+    <link rel="stylesheet" href="css/kelola.css">
+    <link rel="stylesheet" href="css/kelola-persuratan.css">
+    <script src="js/auth"></script>
 </head>
-<body>
-    <main>
-        <h1>Kelola Persuratan</h1>
-        <p><a href="dashboard.html">&larr; Kembali ke Dashboard</a></p>
+<body class="admin page-kelola-persuratan">
+    <!-- Header & menu samping dibuat oleh js/komponen/admin-header.js dan admin-menu.js -->
+    <header class="admin-header" data-komponen="admin-header"></header>
+    <nav class="sidebar" data-komponen="admin-menu" data-aktif="kelola-persuratan"></nav>
+
+    <main class="admin-main">
+        <header class="kepala">
+            <div>
+                <h1>Kelola Persuratan</h1>
+                <p>Catat surat masuk dan keluar, serta cari arsip surat.</p>
+            </div>
+        </header>
+        <nav class="tab-list" aria-label="Persuratan">
+            <a href="#catat" class="aktif">Catat Surat</a>
+            <a href="#cari">Cari Surat</a>
+        </nav>
+
+        <section id="catat" data-tab="catat" class="panel form-panel">
+            <h2>Catat Surat</h2>
+            <form data-simpan action="#" method="post" novalidate>
+                <div class="form-grid">
+                    <div class="field"><label for="nomor">Nomor Surat</label><input type="text" id="nomor" name="nomor" placeholder="001/UKM/2026"></div>
+                    <div class="field"><label for="tgl">Tanggal Surat</label><input type="date" id="tgl" name="tgl" placeholder=""></div>
+                    <div class="field penuh"><label>Jenis Surat</label><div class="pilihan"><label><input type="radio" name="jenis" value="masuk" checked> Surat Masuk</label><label><input type="radio" name="jenis" value="keluar"> Surat Keluar</label></div></div>
+                    <div class="field penuh"><label for="perihal">Perihal</label><input type="text" id="perihal" name="perihal" placeholder="Tulis perihal surat"></div>
+                    <div class="field penuh"><label for="berkas">Berkas Surat (PDF)</label><input type="file" id="berkas" name="berkas" accept="application/pdf"><p class="catatan-form">Hanya PDF, maksimal 10 MB.</p></div>
+                </div>
+                <div class="aksi-form"><button type="submit" class="btn btn-merah">Simpan</button><button type="reset" class="btn tombol-reset">Batal</button></div>
+            </form>
+        </section>
+
+        <section id="cari" data-tab="cari">
+            <form class="filter-bar" data-saring="#tabel-surat" data-kosong="#kosong-surat" role="search" action="#">
+                <div class="field lebar"><label for="cari-surat">Kata kunci</label><input type="search" id="cari-surat" placeholder="Nomor atau perihal"></div>
+                <div class="field"><label for="jenis-surat">Jenis</label><select id="jenis-surat" name="jenis-surat"><option value="">Semua jenis</option><option>Surat Masuk</option><option>Surat Keluar</option></select></div>
+                <div class="field"><label for="dari">Rentang tanggal</label><div class="rentang"><input type="date" id="dari" aria-label="Dari tanggal"><span>s/d</span><input type="date" id="sampai" aria-label="Sampai tanggal"></div></div>
+                <button type="button" class="btn btn-garis" data-reset-saring>Reset</button>
+            </form>
+            <p class="info-hasil"><strong data-jumlah>4</strong> surat ditemukan</p>
+            <div class="tabel-wrap"><table class="tabel" id="tabel-surat">
+                <caption class="sr-only">Daftar surat</caption>
+                <thead><tr><th>Nomor</th><th>Perihal</th><th>Jenis</th><th>Tanggal</th><th>Aksi</th></tr></thead>
+                <tbody>
+                    <tr><td>001/UKM/2026</td><td>Undangan Lomba KRI</td><td>Surat Masuk</td><td>05/10/2026</td><td><span class="aksi-baris"><a href="hapus-konfirmasi.html" data-hapus>Hapus</a></span></td></tr>
+                    <tr><td>002/UKM/2026</td><td>Permohonan Peminjaman Ruang</td><td>Surat Keluar</td><td>12/10/2026</td><td><span class="aksi-baris"><a href="hapus-konfirmasi.html" data-hapus>Hapus</a></span></td></tr>
+                    <tr><td>003/UKM/2026</td><td>Konfirmasi Peserta Lomba</td><td>Surat Keluar</td><td>20/10/2026</td><td><span class="aksi-baris"><a href="hapus-konfirmasi.html" data-hapus>Hapus</a></span></td></tr>
+                    <tr><td>004/UKM/2026</td><td>Pemberitahuan Kegiatan Kampus</td><td>Surat Masuk</td><td>28/10/2026</td><td><span class="aksi-baris"><a href="hapus-konfirmasi.html" data-hapus>Hapus</a></span></td></tr>
+                </tbody>
+            </table></div>
+            <div class="kosong-tabel" id="kosong-surat" data-kosong hidden><strong>Surat tidak ditemukan</strong>Tidak ada surat yang cocok dengan pencarian.<br><button type="button" class="btn btn-garis" data-reset-saring>Reset pencarian</button></div>
+        </section>
     </main>
+
+    <script src="js/komponen/admin-header.js"></script>
+    <script src="js/komponen/admin-menu.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/admin.js"></script>
 </body>
 </html>
+
