@@ -1,17 +1,58 @@
-/* ---------- Kartu konten (berita / modul) ---------- */
-.kabar article, .daftar-berita article, .modul-daftar article {
-    background: #fff; border-radius: 12px; box-shadow: var(--shadow); overflow: hidden;
-    display: flex; flex-direction: column; gap: 6px; padding-bottom: 18px;
+/*Kartu konten (berita / modul)*/
+.kabar article,
+.daftar-berita article,
+.modul-daftar article {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 18px;
 }
-.kabar article img, .daftar-berita article img, .modul-daftar article img {
-    width: 100%; aspect-ratio: 16 / 7; object-fit: cover; margin-bottom: 8px;
+.kabar article img,
+.daftar-berita article img,
+.modul-daftar article img {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  margin-bottom: 8px;
 }
-.kabar article > :not(img), .daftar-berita article > :not(img), .modul-daftar article > :not(img) { margin-inline: 16px; }
-.kabar article h3, .daftar-berita article h3, .modul-daftar article h3 { font-size: 16px; }
-.kabar article p, .daftar-berita article p, .modul-daftar article p { font-size: 13px; color: var(--muted); }
-.kabar article p:nth-of-type(1), .daftar-berita article p:nth-of-type(1) { color: var(--red); font-weight: 600; }
-.kabar article a, .daftar-berita article a, .modul-daftar article a {
-    margin-top: auto; align-self: flex-start; background: var(--red); color: #fff;
-    padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600;
+.kabar article > :not(img),
+.daftar-berita article > :not(img),
+.modul-daftar article > :not(img) {
+  margin-inline: 16px;
 }
-.modul-daftar article a { align-self: stretch; text-align: center; }
+.kabar article h3,
+.daftar-berita article h3,
+.modul-daftar article h3 {
+  font-size: 16px;
+}
+.kabar article p,
+.daftar-berita article p,
+.modul-daftar article p {
+  font-size: 13px;
+  color: var(--muted);
+}
+.kabar article p:nth-of-type(1),
+.daftar-berita article p:nth-of-type(1) {
+  color: var(--red);
+  font-weight: 600;
+}
+.kabar article a,
+.daftar-berita article a,
+.modul-daftar article a {
+  margin-top: auto;
+  align-self: flex-start;
+  background: var(--red);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.modul-daftar article a {
+  align-self: stretch;
+  text-align: center;
+}

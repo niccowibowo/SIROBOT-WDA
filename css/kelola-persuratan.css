@@ -1,5 +1,24 @@
-.page-kelola-persuratan .filter-bar { background: var(--kartu); border: 1px solid var(--garis); border-radius: var(--radius); padding: 18px 22px; box-shadow: var(--bayangan); }
-.page-kelola-persuratan .rentang { display: flex; align-items: center; gap: 8px; }
-.page-kelola-persuratan .rentang span { color: var(--abu); font-size: 13px; }
-.page-kelola-persuratan .info-hasil { font-size: 13px; color: var(--abu); margin-bottom: 10px; }
-.page-kelola-persuratan .kosong-tabel .btn { margin-top: 14px; }
+.page-kelola-persuratan .filter-bar {
+  background: var(--kartu);
+  border: 1px solid var(--garis);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  box-shadow: var(--bayangan);
+}
+.page-kelola-persuratan .rentang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.page-kelola-persuratan .rentang span {
+  color: var(--abu);
+  font-size: 13px;
+}
+.page-kelola-persuratan .info-hasil {
+  font-size: 13px;
+  color: var(--abu);
+  margin-bottom: 10px;
+}
+.page-kelola-persuratan .kosong-tabel .btn {
+  margin-top: 14px;
+}

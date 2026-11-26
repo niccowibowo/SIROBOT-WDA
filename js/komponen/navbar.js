@@ -24,7 +24,6 @@
       '<button class="toggle" id="toggle" type="button" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>' +
       '<ul class="menu">' + li + '</ul>' +
       '<div class="actions">' +
-        '<a href="login.html" class="btn btn-login">Login</a>' +
         '<a href="pendaftaran.html" class="btn btn-join">Join Us <span aria-hidden="true">&rarr;</span></a>' +
       '</div>' +
     '</nav>';
