@@ -2,16 +2,16 @@
    Tambah item baru di sini; 'id' harus unik dan sama dengan ?id= di link kartu. */
 var BERITA = [
   {
-    "id": "juara-olivia-xi",
+    "id": "finalis-tanoker",
     "tipe": "prestasi",
     "kategori": "Prestasi",
-    "judul": "Juara Nasional Olivia XI 2026",
+    "judul": "Robot Tanoker IR 64 juarai KRTMI 2019",
     "penyelenggara": "Vokasi UNESA",
     "peringkat": "Juara 1",
-    "tahun": 2026,
-    "tanggal": "12 Mei 2026",
-    "gambar": "assets/images/WhatsApp Image 2026-11-24 at 09.23.33.jpeg",
-    "caption": "Tim UKM Robotika di Vokasi UNESA (kategori Programmable Logic Controller)",
+    "tahun": 2019,
+    "tanggal": "27 Juni 2019",
+    "gambar": "assets/images/ROBOT TANOKER.png",
+    "caption": "Tim UKM Robotika di KRTMI 2019",
     "isi": [
       "[CONTOH - ganti] Juara Nasional Olivia XI 2026 diselenggarakan oleh Vokasi UNESA. Paragraf ini berisi ringkasan: apa, kapan, dan di mana acara berlangsung.",
       "[CONTOH - ganti] Peran tim UKM Robotika IR64 POLIJE dan hasil yang dicapai pada kegiatan ini.",
@@ -27,7 +27,7 @@ var BERITA = [
     "peringkat": "",
     "tahun": "2026",
     "tanggal": "3 Maret 2026",
-    "gambar": "assets/images/WhatsApp Image 2026-11-24 at 09.23.33.jpeg",
+    "gambar": "assets/images/Sambutan Mahasiswa Baru di Robotika.jpeg",
     "caption": "Peserta workshop Arduino",
     "isi": [
       "Penyambutan Calon anggota baru pada tanggal 27 Agustus 2023 kegiatan ini dilakukan agar calon anggota baru mengenal lebih dekat lingkungan organisasi, anggota serta aktivitas yang di lakukan di IR 64 Robotika.",
@@ -56,17 +56,15 @@ var BERITA = [
     "id": "pergantian-pengurus",
     "tipe": "organisasi",
     "kategori": "Organisasi",
-    "judul": "Pergantian Pengurus UKM Robotika",
+    "judul": "Open Recruitment UKM Robotika",
     "penyelenggara": "Pengurus UKM",
     "peringkat": "",
     "tahun": "2026",
-    "tanggal": "8 Januari 2026",
-    "gambar": "assets/images/gambar-kartu-berita.svg",
+    "tanggal": "14 Agustus 2026",
+    "gambar": "assets/images/Open Recruitmen.webp",
     "caption": "Serah terima pengurus",
     "isi": [
-      "[CONTOH - ganti] Pergantian Pengurus UKM Robotika diselenggarakan oleh Pengurus UKM. Paragraf ini berisi ringkasan: apa, kapan, dan di mana acara berlangsung.",
-      "[CONTOH - ganti] Peran tim UKM Robotika IR64 POLIJE dan hasil yang dicapai pada kegiatan ini.",
-      "[CONTOH - ganti] Penutup dan rencana kegiatan berikutnya."
+      "🚀 OPEN RECRUITMENT UKM ROBOTIKA POLIJE! 🚀 Kreativitas dan Inovasi Bersama Robotika. Buat kamu yang mau belajar IoT, programming, elektronika, sampai siap tempur di ajang kompetisi robotika, pendaftaran resmi dibuka! 📆 Pendaftaran: 15 - 22 Agustus 📲 Konfirmasi / Contact Person: Aan: 0821-4361-8116 Dilla: 0857-3244-4518 Langsung scan QR code di atas atau follow IG @ir64.polije buat info selengkapnya! Jangan sampai ketinggalan, ya! 🔥",
     ]
   },
   {
@@ -129,7 +127,7 @@ var BERITA = [
     "peringkat": "Finalis",
     "tahun": 2025,
     "tanggal": "10 Agustus 2025",
-    "gambar": "assets/images/gambar-kartu-berita.svg",
+    "gambar": "assets/images/FINALIS.jpg",
     "caption": "Tim di Kontes Robot Indonesia",
     "isi": [
       "[CONTOH - ganti] Finalis Kontes Robot Indonesia diselenggarakan oleh Kemdikbud. Paragraf ini berisi ringkasan: apa, kapan, dan di mana acara berlangsung.",

@@ -17,9 +17,60 @@
       var ok = (!k || a.dataset.kategori === k) && (!q || a.textContent.toLowerCase().indexOf(q) > -1);
       a.hidden = !ok; if (ok) ada++;
     });
-    var kosong = seksi.querySelector('.kosong');
-    if (!ada && !kosong) { kosong = document.createElement('p'); kosong.className = 'kosong'; kosong.textContent = 'Berita tidak ditemukan. Coba kata kunci atau kategori lain.'; seksi.appendChild(kosong); }
-    else if (ada && kosong) kosong.remove();
+  var kosong = seksi.querySelector('.kosong');
+
+  if (!ada && !kosong) {
+    kosong = document.createElement('div');
+    kosong.className = 'kosong';
+
+    kosong.innerHTML = `
+      <div style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 16px;
+        width: 100%;
+        box-sizing: border-box;
+      ">
+        <img
+          src="assets/ilustrasi/No result.svg"
+          alt="empty"
+          style="
+            width: 180px;
+            height: 140px;
+            object-fit: contain;
+            background: transparent;
+          "
+        >
+
+        <div>
+          <h3 style="
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 8px;
+          ">
+            Berita tidak ditemukan
+          </h3>
+
+          <p style="
+            font-size: 14px;
+            margin: 0;
+            color: #777;
+          ">
+            Coba kata kunci atau kategori lain.
+          </p>
+        </div>
+      </div>
+    `;
+
+  seksi.appendChild(kosong);
+
+} else if (ada && kosong) {
+  kosong.remove();
+}
   }
   form.addEventListener('submit', function (e) { e.preventDefault(); terapkan(); });
   form.addEventListener('change', terapkan);

@@ -14,63 +14,127 @@
     <link rel="stylesheet" href="css/animasi.css">
 
 </head>
+
 <body>
-    <!-- Navbar: dibuat oleh js/komponen/navbar.js -->
+  <!-- ================= NAVBAR ================= -->
     <header data-komponen="navbar" data-aktif="struktur"></header>
 
-    <main>
-        <section class="struktur">
-            <p><a href="tentang-kami.html">&larr; Tentang kami</a> | <a href="index.html">Kembali ke Beranda</a></p>
-            <h1>Kenali pengurus di balik IR64 POLIJE</h1>
+  <!-- ================= STRUKTUR ================= -->
+  <main class="struktur">
+    <div class="struktur-head">
+      <p class="eyebrow">KEPENGURUSAN SIROBOT</p>
+      <h1>Struktur Organisasi</h1>
+      <p class="subtitle">Susunan pengurus dan divisi SIROBOT</p>
+    </div>
 
-            <h2>Pengurus Inti</h2>
-            <article>
-                <img src="assets/images/ketua-umum.svg" alt="Foto [Nama Ketua Umum]">
-                <h3>[Nama Ketua Umum]</h3>
-                <p><strong>Ketua Umum</strong></p>
-                <p>Memimpin inovasi, menyatukan kolaborasi, dan mengarahkan langkah IR 64 POLIJE dalam mengembangkan teknologi robotika masa depan.</p>
-            </article>
-            <article>
-                <img src="assets/images/wakil-ketua-umum.svg" alt="Foto [Nama Wakil Ketua Umum]">
-                <h3>[Nama Wakil Ketua Umum]</h3>
-                <p><strong>Wakil Ketua Umum</strong></p>
-                <p>Mendukung kepemimpinan, memperkuat kolaborasi, dan memastikan setiap inovasi IR 64 POLIJE berkembang menjadi langkah nyata menuju kemajuan teknologi robotika.</p>
-            </article>
-            <article>
-                <img src="assets/images/sekretaris.svg" alt="Foto [Nama Sekretaris]">
-                <h3>[Nama Sekretaris]</h3>
-                <p><strong>Sekretaris</strong></p>
-                <p>Mengelola persuratan, arsip, dan administrasi UKM.</p>
-            </article>
-            <article>
-                <img src="assets/images/bendahara.svg" alt="Foto [Nama Bendahara]">
-                <h3>[Nama Bendahara]</h3>
-                <p><strong>Bendahara</strong></p>
-                <p>Mengelola uang kas dan keuangan UKM.</p>
-            </article>
+    <div class="org">
+      <!-- Pembina -->
+      <article class="card card-lg reveal" style="height:282px">
+        <div class="photo photo-red">
+          <svg width="92" height="92" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <line x1="32" y1="4" x2="32" y2="12" stroke="#fff" stroke-width="3.5" stroke-linecap="round" />
+            <circle cx="32" cy="4.5" r="3" fill="#fff" />
+            <path d="M32 12c-13.8 0-22 8.2-22 20.5S18.2 54 32 54s22-9.2 22-21.5S45.8 12 32 12Z" fill="#fff" />
+            <rect x="3" y="28" width="6" height="12" rx="3" fill="#fff" />
+            <rect x="55" y="28" width="6" height="12" rx="3" fill="#fff" />
+            <ellipse cx="32" cy="33" rx="16.5" ry="12.5" fill="#ff3535" />
+            <ellipse cx="25" cy="33" rx="3.6" ry="4.4" fill="#fff" />
+            <ellipse cx="39" cy="33" rx="3.6" ry="4.4" fill="#fff" />
+          </svg>
+        </div>
+        <h3 class="role role-dark">Pembina</h3>
+        <p class="name">Ahmad Fahriannur<br />S.T., M.T.</p>
+      </article>
 
-            <h2>Ketua Divisi</h2>
-            <article>
-                <img src="assets/images/ketua-riset.svg" alt="Foto [Nama Ketua Divisi Riset]">
-                <h3>[Nama Ketua Divisi Riset]</h3>
-                <p><strong>Ketua Divisi Riset</strong></p>
-                <p>Memimpin riset dan pengembangan robot untuk lomba.</p>
-            </article>
-            <article>
-                <img src="assets/images/ketua-kelembagaan.svg" alt="Foto [Nama Ketua Divisi Kelembagaan]">
-                <h3>[Nama Ketua Divisi Kelembagaan]</h3>
-                <p><strong>Ketua Divisi Kelembagaan</strong></p>
-                <p>Mengelola organisasi dan penyelenggaraan lomba robotika.</p>
-            </article>
-        </section>
-    
-    </main>
+      <div class="link-v" style="height:48px"></div>
 
-    <!-- Footer: dibuat oleh js/komponen/footer.js -->
+      <!-- Ketua -->
+      <article class="card card-lg card-featured reveal" style="height:277px">
+        <img class="photo" src="img/ketua.png" alt="Abdillah Aziz Putra Susan" />
+        <h3 class="role">Ketua</h3>
+        <p class="name">Abdillah Aziz<br />Putra Susan</p>
+      </article>
+
+      <div class="link-v" style="height:48px"></div>
+
+      <!-- Wakil Ketua -->
+      <article class="card card-lg reveal" style="height:280px">
+        <img class="photo" src="img/wakil.png" alt="Zio Vallentino Gunawan" />
+        <h3 class="role">Wakil Ketua</h3>
+        <p class="name">Zio Vallentino<br />Gunawan</p>
+      </article>
+
+      <!-- Sekretaris / Bendahara + garis penghubung -->
+      <div class="org-mid">
+        <span class="line v-center"></span>
+        <span class="line h-line h1"></span>
+        <span class="line h-line h2"></span>
+        <span class="line v-left"></span>
+        <span class="line v-right"></span>
+
+        <article class="card card-lg mid-left reveal" style="height:276px">
+          <img class="photo" src="img/sekretaris.png" alt="Mar'atus Sholeha" />
+          <h3 class="role">Sekretaris</h3>
+          <p class="name">Mar'atus<br />Sholeha</p>
+        </article>
+
+        <article class="card card-lg mid-right reveal" style="height:276px">
+          <img class="photo" src="img/bendahara.png" alt="Aiyub Herianto" />
+          <h3 class="role">Bendahara</h3>
+          <p class="name">Aiyub Herianto</p>
+        </article>
+      </div>
+
+      <!-- Koordinator -->
+      <div class="coord-grid">
+        <!-- Baris 1 -->
+        <article class="card card-md reveal" style="height:282px">
+          <img class="photo" src="img/psda.png" alt="Ahmad Bayu Putra Dewantara" />
+          <h3 class="role">Koordinator PSDA</h3>
+          <p class="name">Ahmad Bayu<br />Putra Dewantara</p>
+        </article>
+
+        <article class="card card-md reveal" style="height:282px">
+          <img class="photo" src="img/medinfo.png" alt="Firman Abil Nurdiansyah" />
+          <h3 class="role">Koordinator Medinfo</h3>
+          <p class="name">Firman Abil<br />Nurdiansyah</p>
+        </article>
+
+        <article class="card card-md reveal" style="height:282px">
+          <img class="photo" src="img/humas.png" alt="Alfan Ahmad Berlian" />
+          <h3 class="role">Koordinator Humas</h3>
+          <p class="name">Alfan Ahmad<br />Berlian</p>
+        </article>
+
+        <!-- Baris 2 -->
+        <article class="card card-md has-line reveal" style="height:325px">
+          <img class="photo" src="img/elektrik1.png" alt="Muhammad Zaiful" />
+          <h3 class="role role-upper">Koordinator<br />Elektrik</h3>
+          <p class="name">Muhammad<br />Zaiful</p>
+        </article>
+
+        <article class="card card-md has-line reveal" style="height:325px">
+          <img class="photo" src="img/elektrik2.png" alt="Falih Azmi Nabil" />
+          <h3 class="role role-upper">Koordinator<br />Elektrik</h3>
+          <p class="name">Falih Azmi<br />Nabil</p>
+        </article>
+
+        <article class="card card-md has-line reveal" style="height:351px">
+          <img class="photo" src="img/mekanik.png" alt="Faisal Faiz Amriqi" />
+          <h3 class="role role-upper">Koordinator<br />Mekanik, Riset, dan<br />Teknologi</h3>
+          <p class="name">Faisal Faiz<br />Amriqi</p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  
     <footer data-komponen="footer"></footer>
 
     <script src="js/komponen/navbar.js"></script>
     <script src="js/komponen/footer.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 </html>
