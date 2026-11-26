@@ -1,3 +1,13 @@
-.page-kelola-berita .tabel td:nth-child(2) { color: var(--abu); font-weight: 500; }
-.page-kelola-berita .tabel td:nth-child(3), .page-kelola-berita .tabel td:nth-child(4) { white-space: nowrap; }
-.page-kelola-berita .foto-pratinjau { max-width: 220px; margin-top: 10px; border-radius: 12px; }
+.page-kelola-berita .tabel td:nth-child(2) {
+  color: var(--abu);
+  font-weight: 500;
+}
+.page-kelola-berita .tabel td:nth-child(3),
+.page-kelola-berita .tabel td:nth-child(4) {
+  white-space: nowrap;
+}
+.page-kelola-berita .foto-pratinjau {
+  max-width: 220px;
+  margin-top: 10px;
+  border-radius: 12px;
+}

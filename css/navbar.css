@@ -5,44 +5,116 @@
 
 /* Header + Navbar */
 body > header {
-    position: sticky; top: 0; z-index: 1000;
-    padding: 14px 16px 10px;
-    background: rgba(255, 255, 255, .6);
-    backdrop-filter: blur(14px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 14px 16px 10px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
 }
 .navbar {
-    max-width: 1100px; margin: 0 auto; padding: 10px 20px;
-    background: #fff; border: 1px solid rgba(0, 0, 0, .12); border-radius: 18px;
-    box-shadow: 0 6px 20px rgba(20, 30, 60, .12);
-    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(20, 30, 60, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 .logo {
-    width: 120px; height: 44px; flex: none;
-    background: url("../assets/images/LogoSirobot.svg") center / contain no-repeat;
+  width: 120px;
+  height: 44px;
+  flex: none;
+  background: url("../assets/images/LogoSirobot.svg") center / contain no-repeat;
 }
-.menu { display: flex; align-items: center; gap: 8px; }
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 .menu a {
-    display: block; padding: 8px 14px; font-size: 14px; font-weight: 500;
-    border-radius: 8px; transition: background .2s, color .2s;
+  display: block;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
 }
-.menu a:hover { background: var(--gray); }
-.menu a.active, .menu a[aria-current="page"] { background: var(--red-soft); color: var(--red); }
-.actions { display: flex; align-items: center; gap: 12px; }
+.menu a:hover {
+  background: var(--gray);
+}
+.menu a.active,
+.menu a[aria-current="page"] {
+  background: var(--red-soft);
+  color: var(--red);
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
 /* hamburger (tersembunyi di desktop) */
-.toggle { display: none; background: none; border: 0; cursor: pointer; padding: 6px; }
-.toggle span { display: block; width: 24px; height: 3px; margin: 5px 0; background: var(--text); border-radius: 2px; transition: transform .25s, opacity .25s; }
-.toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-.toggle.open span:nth-child(2) { opacity: 0; }
-.toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+.toggle {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 6px;
+}
+.toggle span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 5px 0;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+.toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 
 @media (max-width: 900px) {
-    body > header { padding: 10px 12px; }
-    .navbar { flex-wrap: wrap; }
-    .toggle { display: block; }
-    .menu, .actions { display: none; width: 100%; }
-    .menu { flex-direction: column; align-items: stretch; gap: 4px; padding-top: 8px; }
-    .actions { flex-direction: column; align-items: stretch; }
-    .actions .btn { width: 100%; }
-    .navbar.show .menu, .navbar.show .actions { display: flex; }
+  body > header {
+    padding: 10px 12px;
+  }
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .toggle {
+    display: block;
+  }
+  .menu,
+  .actions {
+    display: none;
+    width: 100%;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding-top: 8px;
+  }
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .actions .btn {
+    width: 100%;
+  }
+  .navbar.show .menu,
+  .navbar.show .actions {
+    display: flex;
+  }
 }

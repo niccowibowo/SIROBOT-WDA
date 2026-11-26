@@ -7,8 +7,8 @@
 
   // ISI kontak di SINI saja, otomatis berlaku di semua halaman.
   var KONTAK = {
-    whatsappLink: 'https://wa.me/62132648562',   // format 62..., tanpa 0 / +
-    whatsappTeks: '085732444518',
+    whatsappLink: 'https://wa.me/6285732444518',   // format 62..., tanpa 0 / +
+    whatsappTeks: '[+62 857-3244-4518]',
     emailLink: 'ukm.robotika@polije.ac.id ',
     emailTeks: 'ukm.robotika@polije.ac.id ',
     instagram: 'https://www.instagram.com/ir64.polije?igsh=MXVicXVndjIxNWNucg%3D%3D',

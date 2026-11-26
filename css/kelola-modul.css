@@ -1,4 +1,17 @@
-.page-kelola-modul .filter-bar { background: var(--kartu); border: 1px solid var(--garis); border-radius: var(--radius); padding: 18px 22px; box-shadow: var(--bayangan); }
-.page-kelola-modul .tabel td:nth-child(4) { font-size: 13px; color: var(--abu); }
-.page-kelola-modul .tabel td.tidak-ada { color: var(--merah); }
-.page-kelola-modul input[type="file"] { max-width: 100%; }
+.page-kelola-modul .filter-bar {
+  background: var(--kartu);
+  border: 1px solid var(--garis);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  box-shadow: var(--bayangan);
+}
+.page-kelola-modul .tabel td:nth-child(4) {
+  font-size: 13px;
+  color: var(--abu);
+}
+.page-kelola-modul .tabel td.tidak-ada {
+  color: var(--merah);
+}
+.page-kelola-modul input[type="file"] {
+  max-width: 100%;
+}

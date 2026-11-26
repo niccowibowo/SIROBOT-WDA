@@ -1,34 +1,103 @@
-.prestasi-daftar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding-top: 16px; }
-.prestasi-daftar > nav { grid-column: 1 / -1; }
-.prestasi-daftar > nav .pill-list { justify-content: center; }
+.prestasi-daftar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-top: 16px;
+}
+.prestasi-daftar > nav {
+  grid-column: 1 / -1;
+}
+.prestasi-daftar > nav .pill-list {
+  justify-content: center;
+}
 
 .prestasi-daftar article {
-    background: #fff; border-radius: 12px; box-shadow: var(--shadow); overflow: hidden;
-    display: flex; flex-direction: column; gap: 6px; padding-bottom: 20px;
-    transition: transform .2s, box-shadow .2s;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.prestasi-daftar article:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(20, 30, 60, .18); }
-.prestasi-daftar article img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; margin-bottom: 10px; }
-.prestasi-daftar article > :not(img) { margin-inline: 18px; }
+.prestasi-daftar article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(20, 30, 60, 0.18);
+}
+.prestasi-daftar article img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.prestasi-daftar article > :not(img) {
+  margin-inline: 18px;
+}
 .prestasi-daftar .peringkat {
-    align-self: flex-start; background: var(--red-soft); color: var(--red);
-    font-size: 12px; font-weight: 700; padding: 3px 12px; border-radius: 999px;
+  align-self: flex-start;
+  background: var(--red-soft);
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 999px;
 }
-.prestasi-daftar h3 { font-size: 18px; color: var(--navy); }
-.prestasi-daftar article p:last-child { font-size: 14px; color: var(--muted); }
+.prestasi-daftar h3 {
+  font-size: 18px;
+  color: var(--navy);
+}
+.prestasi-daftar article p:last-child {
+  font-size: 14px;
+  color: var(--muted);
+}
 
 /* nomor halaman */
-.halaman { grid-column: 1 / -1; display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
-.halaman a {
-    min-width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px;
-    background: #fff; border: 1px solid rgba(0, 0, 0, .12); font-weight: 600; font-size: 14px;
+.halaman {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
 }
-.halaman a:hover { background: var(--gray); }
-.halaman a.aktif { background: var(--red); border-color: var(--red); color: #fff; }
+.halaman a {
+  min-width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font-weight: 600;
+  font-size: 14px;
+}
+.halaman a:hover {
+  background: var(--gray);
+}
+.halaman a.aktif {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
 
-@media (max-width: 900px) { .prestasi-daftar { grid-template-columns: 1fr; } }
-@media (min-width: 560px) and (max-width: 900px) { .prestasi-daftar { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 900px) {
+  .prestasi-daftar {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 560px) and (max-width: 900px) {
+  .prestasi-daftar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 /* seluruh kartu bisa diklik lewat link di judul */
-.prestasi-daftar article { position: relative; }
-.prestasi-daftar h3 a::after { content: ""; position: absolute; inset: 0; }
+.prestasi-daftar article {
+  position: relative;
+}
+.prestasi-daftar h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}

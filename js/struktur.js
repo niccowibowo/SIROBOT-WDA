@@ -1,6 +1,6 @@
-// =========================================================
+//
 // SIROBOT - Struktur Organisasi
-// =========================================================
+//
 
 document.addEventListener("DOMContentLoaded", () => {
   // ---- Animasi kartu muncul saat di-scroll ----

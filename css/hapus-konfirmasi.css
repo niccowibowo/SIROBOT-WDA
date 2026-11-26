@@ -1,5 +1,18 @@
-.konfirmasi { max-width: 460px; margin: 60px auto 0; text-align: center; }
-.konfirmasi .dialog-ikon { margin: 0 auto 16px; }
-.konfirmasi h1 { font-size: 24px; margin-bottom: 8px; }
-.konfirmasi p { color: var(--abu); }
-.konfirmasi .aksi-form { justify-content: center; }
+.konfirmasi {
+  max-width: 460px;
+  margin: 60px auto 0;
+  text-align: center;
+}
+.konfirmasi .dialog-ikon {
+  margin: 0 auto 16px;
+}
+.konfirmasi h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.konfirmasi p {
+  color: var(--abu);
+}
+.konfirmasi .aksi-form {
+  justify-content: center;
+}

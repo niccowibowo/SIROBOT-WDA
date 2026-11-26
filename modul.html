@@ -17,7 +17,7 @@
 <body>
     <!-- Navbar: dibuat oleh js/komponen/navbar.js -->
     <header data-komponen="navbar" data-aktif="modul"></header>
-
+ 
     <main>
         <!-- Hero -->
         <section class="modul-hero">
@@ -27,12 +27,12 @@
                 <p>Di sini kita belajar beberapa cara kerja suatu IC robot, dari Arduino hingga ke Jetson Nano.</p>
             </div>
         </section>
-
+ 
         <!-- Daftar modul -->
         <section class="modul-daftar">
             <h2 class="garis-merah">Modul Pembelajaran</h2>
             <p>Yuk pelajari modul dari IR 64 Robotics</p>
-
+ 
             <form class="modul-filter" action="#" method="get">
                 <ul class="pill-list" aria-label="Waktu">
                     <li><a href="modul.html" class="aktif" data-waktu="semua">Semua</a></li>
@@ -43,18 +43,12 @@
                     <label for="kategori">Kategori riset</label>
                     <select id="kategori" name="kategori">
                         <option value="">Semua kategori</option>
-                        <option>[Kategori riset 1]</option>
-                        <option>[Kategori riset 2]</option>
                     </select>
                 </p>
                 <p>
                     <label for="tahun">Pilih tahun modul</label>
                     <select id="tahun" name="tahun">
                         <option value="">Semua tahun</option>
-                        <option>2026</option>
-                        <option>2025</option>
-                        <option>2024</option>
-                        <option>2020</option>
                     </select>
                 </p>
                 <p>
@@ -62,88 +56,20 @@
                     <input type="search" id="cari-modul" name="cari" placeholder="Cari modul disini...">
                 </p>
             </form>
-
-            <article data-kategori="[Kategori riset 1]" data-tahun="2026" data-waktu="sekarang">
-                <img src="assets/images/Screenshot 2026-11-24 222807.png" alt="Sampul Modul Pembelajaran minggu 1">
-                <span class="status">Pemula</span>
-                <h3>Modul Pembelajaran minggu 1</h3>
-                <p class="kode">Arduino Uno</p>
-                <p>Dasar pemasangan board, pin digital, dan koding pertama.</p>
-                <a href="detail-modul.html?id=minggu-1-arduino-uno">Pelajari sekarang</a>
-            </article>
-            <article data-kategori="[Kategori riset 2]" data-tahun="2026" data-waktu="sekarang">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Sampul Modul Pembelajaran minggu 2">
-                <span class="status">Pemula</span>
-                <h3>Modul Pembelajaran minggu 2</h3>
-                <p class="kode">ESP-32</p>
-                <p>Langkah-langkah dasar dalam pemasangan drive dan koding dari nol.</p>
-                <a href="detail-modul.html?id=minggu-2-esp32">Pelajari sekarang</a>
-            </article>
-            <article data-kategori="[Kategori riset 1]" data-tahun="2025" data-waktu="sekarang">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Sampul Modul Pembelajaran minggu 3">
-                <span class="status">Pemula</span>
-                <h3>Modul Pembelajaran minggu 3</h3>
-                <p class="kode">Sensor &amp; Aktuator</p>
-                <p>Membaca sensor jarak dan menggerakkan motor servo.</p>
-                <a href="detail-modul.html?id=minggu-3-sensor-aktuator">Pelajari sekarang</a>
-            </article>
-            <article data-kategori="[Kategori riset 2]" data-tahun="2025" data-waktu="sekarang">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Sampul Modul Pembelajaran minggu 4">
-                <span class="status">Menengah</span>
-                <h3>Modul Pembelajaran minggu 4</h3>
-                <p class="kode">Line Follower</p>
-                <p>Merancang robot pengikut garis dengan kontrol PID.</p>
-                <a href="detail-modul.html?id=minggu-4-line-follower">Pelajari sekarang</a>
-            </article>
-            <article data-kategori="[Kategori riset 1]" data-tahun="2024" data-waktu="dahulu">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Sampul Modul Pembelajaran minggu 5">
-                <span class="status">Menengah</span>
-                <h3>Modul Pembelajaran minggu 5</h3>
-                <p class="kode">Robot Soccer</p>
-                <p>Strategi dan kontrol robot untuk lomba sepak bola robot.</p>
-                <a href="detail-modul.html?id=minggu-5-robot-soccer">Pelajari sekarang</a>
-            </article>
-            <article data-kategori="[Kategori riset 2]" data-tahun="2024" data-waktu="dahulu">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Sampul Modul Pembelajaran minggu 6">
-                <span class="status">Menengah</span>
-                <h3>Modul Pembelajaran minggu 6</h3>
-                <p class="kode">PLC Dasar</p>
-                <p>Pengantar Programmable Logic Controller untuk lomba vokasi.</p>
-                <a href="detail-modul.html?id=minggu-6-plc-dasar">Pelajari sekarang</a>
-            </article>
-            <article data-kategori="[Kategori riset 1]" data-tahun="2020" data-waktu="dahulu">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Sampul Modul Pembelajaran minggu 7">
-                <span class="status">Lanjutan</span>
-                <h3>Modul Pembelajaran minggu 7</h3>
-                <p class="kode">Raspberry Pi</p>
-                <p>Pengolahan data dan komunikasi antar perangkat.</p>
-                <a href="detail-modul.html?id=minggu-7-raspberry-pi">Pelajari sekarang</a>
-            </article>
-            <article data-kategori="[Kategori riset 2]" data-tahun="2020" data-waktu="dahulu">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Sampul Modul Pembelajaran minggu 8">
-                <span class="status">Lanjutan</span>
-                <h3>Modul Pembelajaran minggu 8</h3>
-                <p class="kode">Computer Vision</p>
-                <p>Deteksi objek sederhana dengan kamera.</p>
-                <a href="detail-modul.html?id=minggu-8-computer-vision">Pelajari sekarang</a>
-            </article>
-            <article data-kategori="[Kategori riset 1]" data-tahun="2020" data-waktu="dahulu">
-                <img src="assets/images/gambar-kartu-berita.svg" alt="Sampul Modul Pembelajaran minggu 9">
-                <span class="status">Lanjutan</span>
-                <h3>Modul Pembelajaran minggu 9</h3>
-                <p class="kode">Jetson Nano</p>
-                <p>Menjalankan model AI pada robot dengan Jetson Nano.</p>
-                <a href="detail-modul.html?id=minggu-9-jetson-nano">Pelajari sekarang</a>
-            </article>
+ 
+            <!-- kartu modul dibuat oleh js/modul.js dari js/data.js -->
+ 
         </section>
     </main>
-
+ 
     <!-- Footer: dibuat oleh js/komponen/footer.js -->
     <footer data-komponen="footer"></footer>
-
+ 
     <script src="js/komponen/navbar.js"></script>
     <script src="js/komponen/footer.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/modul.js"></script>
 </body>
 </html>
+ 

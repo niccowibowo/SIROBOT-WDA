@@ -1,4 +1,4 @@
-// ===== 1. Tombol buka/tutup menu samping =====
+// 1. Tombol buka/tutup menu samping
 const header = document.querySelector('header');
 const tombolMenu = document.createElement('button');
 tombolMenu.type = 'button';
@@ -16,7 +16,7 @@ tombolMenu.addEventListener('click', function () {
   document.body.classList.toggle('sidebar-tutup');
 });
 
-// ===== 2. Tema terang / gelap =====
+// 2. Tema terang / gelap
 const nav = document.querySelector('nav');
 const kotakTema = document.createElement('div');
 kotakTema.className = 'tema';
@@ -47,7 +47,7 @@ tombolTema.addEventListener('click', function () {
   }
 });
 
-// ===== 3. Pencarian =====
+// 3. Pencarian
 const formCari = document.querySelector('header form');
 const inputCari = document.getElementById('cari');
 const semuaItem = document.querySelectorAll('main li');
