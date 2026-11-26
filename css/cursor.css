@@ -1,0 +1,80 @@
+
+/* =========================================
+   CUSTOM ANIMATED CURSOR
+   ========================================= */
+
+:root {
+  --cursor-color: #ff0000;
+  --cursor-size: 8px;
+  --cursor-outline-size: 38px;
+  --cursor-outline-border: 1px;
+}
+
+/* Sembunyikan cursor bawaan */
+@media (pointer: fine) {
+  body,
+  body a,
+  body button,
+  body input,
+  body textarea,
+  body select {
+    cursor: none !important;
+  }
+
+  .custom-cursor,
+  .custom-cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+  }
+
+  /* Titik utama */
+  .custom-cursor {
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    background: var(--cursor-color);
+  }
+
+  /* Lingkaran luar */
+  .custom-cursor-outline {
+    width: var(--cursor-outline-size);
+    height: var(--cursor-outline-size);
+    border: var(--cursor-outline-border) solid var(--cursor-color);
+    transition:
+      width .3s ease,
+      height .3s ease,
+      background .3s ease,
+      border-color .3s ease;
+  }
+
+  /* Hover */
+  .custom-cursor-outline.hover {
+    width: 65px;
+    height: 65px;
+    background: rgba(255,255,255,.12);
+  }
+
+  /* Klik */
+  .custom-cursor-outline.click {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* Efek saat pointer di atas teks */
+  .custom-cursor-outline.text-hover {
+    width: 65px;
+    height: 65px;
+    background: rgba(255,255,255,.08);
+    mix-blend-mode: difference;
+  }
+
+  /* Hilangkan saat keluar viewport */
+  .custom-cursor.hidden {
+    opacity: 0;
+  }
+}
