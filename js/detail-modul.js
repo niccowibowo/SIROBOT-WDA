@@ -1,4 +1,4 @@
-/* detail-modul.js : mengisi halaman detail modul berdasarkan ?id= (data di js/data.js)
+/* detail-modul.js ini buat mengisi halaman detail modul berdasarkan ?id= (data di js/data.js)
    Ukuran file dideteksi OTOMATIS dari file PDF-nya (perlu dibuka lewat server/hosting, bukan file://). */
 (function () {
   'use strict';
