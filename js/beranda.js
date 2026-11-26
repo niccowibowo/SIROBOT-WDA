@@ -39,12 +39,52 @@
 
     var ada = wadah.querySelectorAll('article').length;
     var kosong = wadah.querySelector('.kosong');
-    if (!ada && !kosong) {
-      kosong = el('p', 'Belum ada berita pada kategori ini.');
-      kosong.className = 'kosong';
-      wadah.appendChild(kosong);
-    } else if (ada && kosong) kosong.remove();
-  }
+
+if (!ada && !kosong) {
+  kosong = document.createElement('div');
+  kosong.className = 'kosong';
+
+  kosong.innerHTML = `
+    <div style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 40px 20px;
+      gap: 16px;
+    ">
+      <img
+        src="assets/ilustrasi/No result.svg"
+        alt=""
+        style="
+          width: 180px;
+          height: 140px;
+          object-fit: contain;
+          display: block;
+          background: transparent;
+        "
+      >
+
+      <div>
+        <h3 style="
+          font-size: 18px;
+          font-weight: 700;
+          margin: 0 0 8px;
+        ">
+          Belum ada berita pada kategori ini.
+        </h3>
+      </div>
+    </div>
+  `;
+
+  wadah.appendChild(kosong);
+
+} else if (ada && kosong) 
+  kosong.remove();
+}
 
   pills.forEach(function (p) {
     p.addEventListener('click', function (e) {
