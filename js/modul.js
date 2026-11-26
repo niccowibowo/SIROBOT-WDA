@@ -1,8 +1,5 @@
-/*   modul.js : halaman MODUL
+/*   modul.js buat halaman MODUL
    Kartu + pilihan Kategori & Tahun dibuat dari js/data.js (MODUL), jadi selalu sinkron dengan halaman detail.
-   Filter: Waktu (Semua/Sekarang/Dahulu) + Kategori riset + Tahun + Cari
-   "Sekarang" = modul tahun lalu & tahun ini; "Dahulu" = lebih lama (dihitung otomatis dari tahun modul).
-   Tahun diambil dari field 'tahun'; jika kosong, diambil dari 4 digit terakhir field 'tanggal'.
   */
 (function () {
   'use strict';
