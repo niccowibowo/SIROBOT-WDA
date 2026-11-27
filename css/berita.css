@@ -1,47 +1,30 @@
-/*  berita.css buat halaman BERITA Dimuat setelah css/base.css */
+/*  berita.css : halaman BERITA Dimuat setelah css/base.css */
 
 /* ---------- Sorotan utama ---------- */
-.sorotan h2 {
-  font-size: 28px;
-  color: var(--navy);
-  margin-bottom: 4px;
+.sorotan h2 { 
+  font-size: 28px; 
+  color: var(--navy); 
+  margin-bottom: 4px; 
 }
-.sorotan h2::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: var(--red);
-  margin-top: 8px;
+.sorotan h2::after { 
+  content: ""; 
+  display: block; 
+  width: 40px; height: 3px; background: var(--red); 
+  margin-top: 8px; 
 }
-.sorotan > p {
-  font-size: 13px;
-  margin-bottom: 24px;
+.sorotan > p { 
+  font-size: 13px; margin-bottom: 24px; 
 }
 .sorotan article {
-  position: relative;
-  overflow: hidden;
-  min-height: 300px;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 6px;
-  padding: 28px;
-  color: #fff;
-  background: #1f2a44;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+    position: relative; overflow: hidden; min-height: 300px; border-radius: 16px;
+    display: flex; flex-direction: column; justify-content: flex-end; gap: 6px;
+    padding: 28px; color: #fff; background: #1f2a44;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, .25);
 }
 .sorotan article img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;
 }
 .sorotan article::after {
-  /* gradasi gelap agar teks terbaca */
   content: "";
   position: absolute;
   inset: 0;
@@ -93,29 +76,25 @@
   color: var(--navy);
 }
 .daftar-berita > form {
+  /* filter: pill waktu | kategori | tahun | cari (sama seperti Modul) */
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: 1.4fr 2fr;
+  grid-template-columns: auto 1fr 1fr 1.3fr;
   gap: 16px;
-  align-items: center;
-}
-.daftar-berita > form p {
-  display: flex;
-  gap: 12px;
-}
-.daftar-berita > form input[type="search"] {
-  flex: 1;
-}
-.daftar-berita > form select {
-  flex: 1;
+  align-items: end;
 }
 .daftar-berita > form label {
-  /* label tetap ada untuk pembaca layar */
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.daftar-berita > form select,
+.daftar-berita > form input[type="search"] {
+  width: 100%;
+}
+.daftar-berita > form .pill-list {
+  align-self: center;
 }
 
 @media (max-width: 900px) {
@@ -124,8 +103,5 @@
   }
   .daftar-berita > form {
     grid-template-columns: 1fr;
-  }
-  .daftar-berita > form p {
-    flex-direction: column;
   }
 }

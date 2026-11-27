@@ -13,12 +13,9 @@
     <link rel="stylesheet" href="css/kartu.css">
     <link rel="stylesheet" href="css/berita.css">
     <link rel="stylesheet" href="css/animasi.css">
-<<<<<<< HEAD
     <script src="js/komponen/cookies.js"></script>
     <link rel="stylesheet" href="css/cursor.css">
     <script src="js/komponen/cursor.js" defer></script>
-=======
->>>>>>> 85dc1e477b7802621360f4ac65848d656f2e9888
 </head>
 <body>
     <!-- Navbar: dibuat oleh js/komponen/navbar.js -->
@@ -41,23 +38,26 @@
         <section class="daftar-berita">
             <h2>Daftar Berita & Prestasi</h2>
             <form action="#" method="get">
-                <p>
-                    <label for="cari">Cari topik</label>
-                    <input type="search" id="cari" name="cari" placeholder="Cari topik disini...">
-                </p>
+                <ul class="pill-list" aria-label="Waktu">
+                    <li><a href="berita.html" class="aktif" data-waktu="semua">Semua</a></li>
+                    <li><a href="berita.html?waktu=sekarang" data-waktu="sekarang">Sekarang</a></li>
+                    <li><a href="berita.html?waktu=dahulu" data-waktu="dahulu">Dahulu</a></li>
+                </ul>
                 <p>
                     <label for="kategori">Kategori</label>
                     <select id="kategori" name="kategori">
-                        <option>Semua Kategori</option>
-                        <option>Prestasi</option>
-                        <option>Kegiatan</option>
-                        <option>Organisasi</option>
+                        <option value="">Semua kategori</option>
                     </select>
-                    <label for="urutan">Urutkan</label>
-                    <select id="urutan" name="urutan">
-                        <option>Terbaru</option>
-                        <option>Terlama</option>
+                </p>
+                <p>
+                    <label for="tahun">Pilih tahun</label>
+                    <select id="tahun" name="tahun">
+                        <option value="">Semua tahun</option>
                     </select>
+                </p>
+                <p>
+                    <label for="cari">Cari topik</label>
+                    <input type="search" id="cari" name="cari" placeholder="Cari topik disini...">
                 </p>
             </form>
         </section>
@@ -71,6 +71,7 @@
     <script src="js/komponen/footer.js"></script>
     <script src="js/script.js"></script>
     <script src="js/data.js"></script>
+    <script src="js/urut-berita.js"></script>
     <script src="js/berita.js"></script>
 </body>
 </html>

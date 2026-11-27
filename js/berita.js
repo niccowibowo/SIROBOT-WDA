@@ -1,15 +1,17 @@
-/* berita.js : halaman BERITA
-   Sorotan + semua kartu dibuat dari js/data.js, jadi selalu sinkron dengan halaman detail.
-   Filter: cari + kategori + urutan (Terbaru = urutan di data.js, Terlama = kebalikannya) */
 (function () {
   'use strict';
   var seksi = document.querySelector('.daftar-berita');
   if (!seksi || typeof BERITA === 'undefined') return;
   var form = seksi.querySelector('form');
+  if (typeof tglBerita === 'undefined') {   // cadangan bila urut-berita.js belum dipasang
+    window.tglBerita = function (b) { return new Date(parseInt(b.tahun, 10) || 1970, 0, 1); };
+    window.waktuBerita = function (b) { return parseInt(b.tahun, 10) >= new Date().getFullYear() - 1 ? 'sekarang' : 'dahulu'; };
+  }
 
   function el(tag, teks) { var e = document.createElement(tag); if (teks) e.textContent = teks; return e; }
   function potong(t, n) { return t.length > n ? t.slice(0, n).replace(/\s+\S*$/, '') + '…' : t; }
   function href(b) { return 'detail-berita.html?id=' + encodeURIComponent(b.id); }
+  function unik(arr) { return arr.filter(function (v, i) { return v && arr.indexOf(v) === i; }); }
 
   /* ---------- Sorotan utama ---------- */
   var sor = document.querySelector('.sorotan');
@@ -24,11 +26,19 @@
     sor.appendChild(as);
   }
 
-  /* ---------- Kartu daftar berita ---------- */
-  BERITA.forEach(function (b, i) {
+  /* ---------- Pilihan Kategori & Tahun dari data ---------- */
+  function isiPilihan(select, nilai) {
+    nilai.forEach(function (v) { var o = el('option', v); o.value = v; select.appendChild(o); });
+  }
+  isiPilihan(form.elements.kategori, unik(BERITA.map(function (b) { return b.kategori; })).sort());
+  isiPilihan(form.elements.tahun, unik(BERITA.map(function (b) { return String(tglBerita(b).getFullYear()); })).sort().reverse());
+
+  /* ---------- Kartu daftar berita (sudah urut terbaru) ---------- */
+  BERITA.forEach(function (b) {
     var a = el('article');
-    a.dataset.kategori = b.kategori.toLowerCase();
-    a.dataset.urut = i;
+    a.dataset.kategori = b.kategori;
+    a.dataset.tahun = String(tglBerita(b).getFullYear());
+    a.dataset.waktu = waktuBerita(b);
     var img = el('img'); img.src = b.gambar; img.alt = b.judul;
     var l = el('a', 'Baca Selengkapnya'); l.href = href(b);
     a.appendChild(img); a.appendChild(el('h3', b.judul));
@@ -38,17 +48,15 @@
     seksi.appendChild(a);
   });
   var arts = Array.prototype.slice.call(seksi.querySelectorAll('article'));
+  var pills = Array.prototype.slice.call(form.querySelectorAll('.pill-list a'));
+  var waktu = 'semua';
 
   /* ---------- Filter ---------- */
   function terapkan() {
-    var q = form.elements.cari.value.trim().toLowerCase();
-    var sel = form.elements.kategori, k = sel.selectedIndex > 0 ? sel.value.toLowerCase() : '';
-    var terlama = form.elements.urutan.value === 'Terlama';
-    var urut = arts.slice().sort(function (a, b) { return terlama ? b.dataset.urut - a.dataset.urut : a.dataset.urut - b.dataset.urut; });
-    var ada = 0;
-    urut.forEach(function (a) {
-      seksi.appendChild(a);
-      var ok = (!k || a.dataset.kategori === k) && (!q || a.textContent.toLowerCase().indexOf(q) > -1);
+    var k = form.elements.kategori.value, t = form.elements.tahun.value, q = form.elements.cari.value.trim().toLowerCase(), ada = 0;
+    arts.forEach(function (a) {
+      var ok = (waktu === 'semua' || a.dataset.waktu === waktu) && (!k || a.dataset.kategori === k) && (!t || a.dataset.tahun === t) &&
+        (!q || a.textContent.toLowerCase().indexOf(q) > -1);
       a.hidden = !ok; if (ok) ada++;
     });
     var kosong = seksi.querySelector('.kosong');
@@ -66,7 +74,14 @@
       kosong.remove();
     }
   }
+  function setWaktu(w) { waktu = w; pills.forEach(function (a) { a.classList.toggle('aktif', a.dataset.waktu === w); }); terapkan(); }
+
+  pills.forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); setWaktu(a.dataset.waktu); }); });
   form.addEventListener('submit', function (e) { e.preventDefault(); terapkan(); });
   form.addEventListener('change', terapkan);
   form.addEventListener('input', function (e) { if (e.target.type === 'search') terapkan(); });
+
+  var p = new URLSearchParams(location.search);
+  ['kategori', 'tahun', 'cari'].forEach(function (n) { if (p.get(n) && form.elements[n]) form.elements[n].value = p.get(n); });
+  setWaktu(p.get('waktu') || 'semua');
 })();
