@@ -1,42 +1,30 @@
-/*    SIROBOT - Struktur Organisasi
-   Skala desain: lebar 1440px
-  */
+/* =========================================================
+   SIROBOT - Section Struktur Organisasi (desktop + responsive)
+   ========================================================= */
 
-:root {
+body { margin: 0; }
+
+.struktur {
   --brand: #ff3535;
-  --brand-soft: #fdecec;
   --ink: #111827;
-  --muted: #6b7280;
   --line: #d4d4d4;
   --card-border: #e1e1e1;
-  --dark: #111111;
-}
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
+  padding: 115px 16px 120px;
   background: #fff;
   color: var(--ink);
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-a { text-decoration: none; color: inherit; }
-ul { list-style: none; margin: 0; padding: 0; }
-img { display: block; max-width: 100%; }
+.struktur *, .struktur *::before, .struktur *::after { box-sizing: border-box; }
+.struktur img { display: block; max-width: 100%; }
 
-/*  HEADER SEKSI  */
-.struktur {
-  padding: 115px 16px 260px;
-}
-
+/* ---------- Judul ---------- */
 .struktur-head { text-align: center; margin-bottom: 55px; }
 .eyebrow {
   margin: 0 0 14px;
   font-size: 12.5px;
   font-weight: 500;
-  letter-spacing: 0.01em;
   color: var(--brand);
 }
 .struktur-head h1 {
@@ -45,11 +33,10 @@ img { display: block; max-width: 100%; }
   line-height: 1.15;
   font-weight: 700;
   letter-spacing: -0.03em;
-  color: #111827;
 }
 .subtitle { margin: 14px 0 0; font-size: 16px; color: #4b5563; }
 
-/*  ORG CHART  */
+/* ---------- Bagan (desktop) ---------- */
 .org {
   width: 1024px;
   margin: 0 auto;
@@ -57,13 +44,8 @@ img { display: block; max-width: 100%; }
   flex-direction: column;
   align-items: center;
 }
+.link-v { width: 2px; height: 48px; background: var(--line); }
 
-.link-v {
-  width: 2px;
-  background: var(--line);
-}
-
-/* ---- Card ---- */
 .card {
   background: #fff;
   border: 1px solid var(--card-border);
@@ -73,7 +55,7 @@ img { display: block; max-width: 100%; }
   position: relative;
 }
 .card-lg { width: 280px; }
-.card-md { width: 260px; padding: 17px 17px 0; }
+.card-md { width: 260px; }
 
 .card .photo {
   width: 100%;
@@ -83,34 +65,33 @@ img { display: block; max-width: 100%; }
   background: #e9e3dc;
 }
 .card-md .photo { height: 179px; }
-
 .photo-red {
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--brand) !important;
 }
-
+.photo .photo-red{
+  background: url("../assets/images/LogoSirobot.svg") center / contain no-repeat;
+}
 .role {
   margin: 13px 0 0;
   font-size: 18px;
   line-height: 25px;
   font-weight: 600;
-  color: var(--brand);
   letter-spacing: -0.01em;
+  color: var(--brand);
 }
-.role-dark { color: #111827; }
+.role-dark { color: var(--ink); }
 .role-upper { text-transform: uppercase; }
-
 .name {
   margin: 8px 0 0;
   font-size: 11px;
   line-height: 13px;
   font-weight: 600;
-  color: #111827;
+  color: var(--ink);
 }
 
-/* Ketua (kartu merah) */
 .card-featured {
   background: var(--brand);
   border-color: var(--brand);
@@ -119,26 +100,21 @@ img { display: block; max-width: 100%; }
 .card-featured .role,
 .card-featured .name { color: #fff; }
 
-/* ---- Baris Sekretaris / Bendahara ---- */
-.org-mid {
-  position: relative;
-  width: 1024px;
-  height: 276px;
-  margin-bottom: 65px;
-}
-.mid-left { position: absolute; left: 0; top: 0; }
+/* Sekretaris / Bendahara + garis */
+.org-mid { position: relative; width: 1024px; height: 276px; margin-bottom: 65px; }
+.mid-left  { position: absolute; left: 0;  top: 0; }
 .mid-right { position: absolute; right: 0; top: 0; }
+.org-mid .card { z-index: 1; }
 
-.line { position: absolute; background: var(--line); z-index: 0; }
-.v-center { left: 511px; top: 0; width: 2px; height: 341px; }
+.line { position: absolute; background: var(--line); }
+.v-center { left: 511px; top: 0;   width: 2px; height: 341px; }
 .v-left   { left: 218px; top: 276px; width: 2px; height: 65px; }
 .v-right  { left: 802px; top: 276px; width: 2px; height: 65px; }
 .h-line   { left: 280px; width: 464px; height: 2px; }
 .h1 { top: 129px; }
 .h2 { top: 241px; }
-.org-mid .card { z-index: 1; }
 
-/* ---- Grid Koordinator ---- */
+/* Koordinator */
 .coord-grid {
   width: 844px;
   display: grid;
@@ -158,42 +134,13 @@ img { display: block; max-width: 100%; }
   background: var(--line);
 }
 
-.btn-contact {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 36px;
-  width: 203px;
-  height: 45px;
-  border-radius: 10px;
-  background: #ff3535;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 500;
-  transition: background 0.2s, transform 0.2s;
-}
-.btn-contact:hover { background: #e62b2b; transform: translateY(-1px); }
-.social-text { margin: 12px 0 0; font-size: 14px; color: #fff; }
-.socials { display: flex; gap: 12px; margin-top: 14px; }
-.socials a {
-  width: 33px;
-  height: 33px;
-  border-radius: 50%;
-  background: #2a2a2a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s, transform 0.2s;
-}
-.socials a:hover { background: var(--brand); transform: translateY(-2px); }
-.copy { margin: 44px 0 0; font-size: 12.5px; color: #8a8a8a; }
-
-/*  ANIMASI MUNCUL  */
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+/* Animasi muncul */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.show { opacity: 1; transform: none; }
-/* ======
+
+/* =========================================================
    RESPONSIVE
-   ====== */
+   ========================================================= */
 
 /* Tablet & mobile: bagan jadi satu kolom dengan garis tengah */
 @media (max-width: 1100px) {
